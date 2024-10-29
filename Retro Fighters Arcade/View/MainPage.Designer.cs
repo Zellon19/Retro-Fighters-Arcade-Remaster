@@ -32,13 +32,13 @@
             btnPrevious = new Button();
             btnNext = new Button();
             btnStartCore = new Button();
-            pictureBox1 = new PictureBox();
-            pictureBox2 = new PictureBox();
-            pictureBox4 = new PictureBox();
+            pcbMainCore = new PictureBox();
+            pcbPrevCore = new PictureBox();
+            pcbNextCore = new PictureBox();
             pictureBox5 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbMainCore).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbPrevCore).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pcbNextCore).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
             SuspendLayout();
             // 
@@ -50,6 +50,7 @@
             btnPrevious.TabIndex = 0;
             btnPrevious.Text = "<-";
             btnPrevious.UseVisualStyleBackColor = true;
+            btnPrevious.Click += btnPrevious_Click;
             // 
             // btnNext
             // 
@@ -59,39 +60,41 @@
             btnNext.TabIndex = 1;
             btnNext.Text = "->";
             btnNext.UseVisualStyleBackColor = true;
+            btnNext.Click += btnNext_Click;
             // 
             // btnStartCore
             // 
-            btnStartCore.Location = new Point(474, 637);
+            btnStartCore.Location = new Point(470, 637);
             btnStartCore.Name = "btnStartCore";
             btnStartCore.Size = new Size(247, 110);
             btnStartCore.TabIndex = 2;
             btnStartCore.Text = "Iniciar Emulador";
             btnStartCore.UseVisualStyleBackColor = true;
+            btnStartCore.Click += btnStartCore_Click;
             // 
-            // pictureBox1
+            // pcbMainCore
             // 
-            pictureBox1.Location = new Point(449, 138);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(289, 444);
-            pictureBox1.TabIndex = 3;
-            pictureBox1.TabStop = false;
+            pcbMainCore.Location = new Point(449, 138);
+            pcbMainCore.Name = "pcbMainCore";
+            pcbMainCore.Size = new Size(289, 444);
+            pcbMainCore.TabIndex = 3;
+            pcbMainCore.TabStop = false;
             // 
-            // pictureBox2
+            // pcbPrevCore
             // 
-            pictureBox2.Location = new Point(69, 165);
-            pictureBox2.Name = "pictureBox2";
-            pictureBox2.Size = new Size(259, 395);
-            pictureBox2.TabIndex = 4;
-            pictureBox2.TabStop = false;
+            pcbPrevCore.Location = new Point(69, 165);
+            pcbPrevCore.Name = "pcbPrevCore";
+            pcbPrevCore.Size = new Size(259, 395);
+            pcbPrevCore.TabIndex = 4;
+            pcbPrevCore.TabStop = false;
             // 
-            // pictureBox4
+            // pcbNextCore
             // 
-            pictureBox4.Location = new Point(861, 165);
-            pictureBox4.Name = "pictureBox4";
-            pictureBox4.Size = new Size(259, 395);
-            pictureBox4.TabIndex = 6;
-            pictureBox4.TabStop = false;
+            pcbNextCore.Location = new Point(861, 165);
+            pcbNextCore.Name = "pcbNextCore";
+            pcbNextCore.Size = new Size(259, 395);
+            pcbNextCore.TabIndex = 6;
+            pcbNextCore.TabStop = false;
             // 
             // pictureBox5
             // 
@@ -107,18 +110,18 @@
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
             ClientSize = new Size(1272, 767);
-            Controls.Add(pictureBox4);
-            Controls.Add(pictureBox2);
-            Controls.Add(pictureBox1);
+            Controls.Add(pcbNextCore);
+            Controls.Add(pcbPrevCore);
+            Controls.Add(pcbMainCore);
             Controls.Add(btnStartCore);
             Controls.Add(btnNext);
             Controls.Add(btnPrevious);
             Controls.Add(pictureBox5);
             Name = "MainPage";
             Text = "Retro Fighters Arcade";
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox2).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox4).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbMainCore).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbPrevCore).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pcbNextCore).EndInit();
             ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
             ResumeLayout(false);
         }
@@ -128,9 +131,9 @@
         private Button btnPrevious;
         private Button btnNext;
         private Button btnStartCore;
-        private PictureBox pictureBox1;
-        private PictureBox pictureBox2;
-        private PictureBox pictureBox4;
+        private PictureBox pcbMainCore;
+        private PictureBox pcbPrevCore;
+        private PictureBox pcbNextCore;
         private PictureBox pictureBox5;
     }
 }
