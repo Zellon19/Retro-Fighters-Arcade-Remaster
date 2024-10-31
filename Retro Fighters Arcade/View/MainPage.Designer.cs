@@ -80,7 +80,6 @@
             btnSegaSearch.Name = "btnSegaSearch";
             btnSegaSearch.Size = new Size(44, 44);
             btnSegaSearch.TabIndex = 6;
-            btnSegaSearch.Text = "sega";
             tlpGeneral.SetToolTip(btnSegaSearch, "Click aqui para buscar juegos solo de SEGA Genesis");
             btnSegaSearch.UseVisualStyleBackColor = true;
             // 
@@ -91,7 +90,6 @@
             btnNesSearch.Name = "btnNesSearch";
             btnNesSearch.Size = new Size(44, 44);
             btnNesSearch.TabIndex = 5;
-            btnNesSearch.Text = "nes";
             tlpGeneral.SetToolTip(btnNesSearch, "Click aqui para buscar solo juegos de Nintendo NES");
             btnNesSearch.UseVisualStyleBackColor = true;
             // 
@@ -112,7 +110,6 @@
             btnPsOneSearch.Name = "btnPsOneSearch";
             btnPsOneSearch.Size = new Size(44, 44);
             btnPsOneSearch.TabIndex = 3;
-            btnPsOneSearch.Text = "ps1";
             tlpGeneral.SetToolTip(btnPsOneSearch, "Click aqui para buscar juegos solo de PlayStation Uno");
             btnPsOneSearch.UseVisualStyleBackColor = true;
             // 
