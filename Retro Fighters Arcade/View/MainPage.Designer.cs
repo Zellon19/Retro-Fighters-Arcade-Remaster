@@ -28,112 +28,172 @@
         /// </summary>
         private void InitializeComponent()
         {
+            components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(MainPage));
-            btnPrevious = new Button();
-            btnNext = new Button();
-            btnStartCore = new Button();
-            pcbMainCore = new PictureBox();
-            pcbPrevCore = new PictureBox();
-            pcbNextCore = new PictureBox();
-            pictureBox5 = new PictureBox();
-            ((System.ComponentModel.ISupportInitialize)pcbMainCore).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pcbPrevCore).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pcbNextCore).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).BeginInit();
+            grpTopNavigator = new GroupBox();
+            btnRefreshGames = new Button();
+            btnSegaSearch = new Button();
+            btnNesSearch = new Button();
+            btnAtariSearch = new Button();
+            btnPsOneSearch = new Button();
+            lblSelectEmulator = new Label();
+            lblGameSearch = new Label();
+            txtSearchGame = new TextBox();
+            btnSearchGame = new Button();
+            grpArcade = new GroupBox();
+            tlpGeneral = new ToolTip(components);
+            grpTopNavigator.SuspendLayout();
             SuspendLayout();
             // 
-            // btnPrevious
+            // grpTopNavigator
             // 
-            btnPrevious.Location = new Point(140, 668);
-            btnPrevious.Name = "btnPrevious";
-            btnPrevious.Size = new Size(188, 49);
-            btnPrevious.TabIndex = 0;
-            btnPrevious.Text = "<-";
-            btnPrevious.UseVisualStyleBackColor = true;
-            btnPrevious.Click += btnPrevious_Click;
+            grpTopNavigator.Controls.Add(btnRefreshGames);
+            grpTopNavigator.Controls.Add(btnSegaSearch);
+            grpTopNavigator.Controls.Add(btnNesSearch);
+            grpTopNavigator.Controls.Add(btnAtariSearch);
+            grpTopNavigator.Controls.Add(btnPsOneSearch);
+            grpTopNavigator.Controls.Add(lblSelectEmulator);
+            grpTopNavigator.Controls.Add(lblGameSearch);
+            grpTopNavigator.Controls.Add(txtSearchGame);
+            grpTopNavigator.Controls.Add(btnSearchGame);
+            grpTopNavigator.Location = new Point(12, 12);
+            grpTopNavigator.Name = "grpTopNavigator";
+            grpTopNavigator.Size = new Size(1326, 100);
+            grpTopNavigator.TabIndex = 0;
+            grpTopNavigator.TabStop = false;
+            grpTopNavigator.Text = "Navegador";
             // 
-            // btnNext
+            // btnRefreshGames
             // 
-            btnNext.Location = new Point(861, 668);
-            btnNext.Name = "btnNext";
-            btnNext.Size = new Size(188, 49);
-            btnNext.TabIndex = 1;
-            btnNext.Text = "->";
-            btnNext.UseVisualStyleBackColor = true;
-            btnNext.Click += btnNext_Click;
+            btnRefreshGames.Image = (Image)resources.GetObject("btnRefreshGames.Image");
+            btnRefreshGames.Location = new Point(826, 35);
+            btnRefreshGames.Name = "btnRefreshGames";
+            btnRefreshGames.Size = new Size(44, 44);
+            btnRefreshGames.TabIndex = 7;
+            tlpGeneral.SetToolTip(btnRefreshGames, "Dale click aqui para refrescar\r\nla lista de juegos.");
+            btnRefreshGames.UseVisualStyleBackColor = true;
             // 
-            // btnStartCore
+            // btnSegaSearch
             // 
-            btnStartCore.Location = new Point(470, 637);
-            btnStartCore.Name = "btnStartCore";
-            btnStartCore.Size = new Size(247, 110);
-            btnStartCore.TabIndex = 2;
-            btnStartCore.Text = "Iniciar Emulador";
-            btnStartCore.UseVisualStyleBackColor = true;
-            btnStartCore.Click += btnStartCore_Click;
+            btnSegaSearch.Image = (Image)resources.GetObject("btnSegaSearch.Image");
+            btnSegaSearch.Location = new Point(161, 45);
+            btnSegaSearch.Name = "btnSegaSearch";
+            btnSegaSearch.Size = new Size(44, 44);
+            btnSegaSearch.TabIndex = 6;
+            btnSegaSearch.Text = "sega";
+            tlpGeneral.SetToolTip(btnSegaSearch, "Click aqui para buscar juegos solo de SEGA Genesis");
+            btnSegaSearch.UseVisualStyleBackColor = true;
             // 
-            // pcbMainCore
+            // btnNesSearch
             // 
-            pcbMainCore.Location = new Point(449, 138);
-            pcbMainCore.Name = "pcbMainCore";
-            pcbMainCore.Size = new Size(289, 444);
-            pcbMainCore.TabIndex = 3;
-            pcbMainCore.TabStop = false;
+            btnNesSearch.Image = (Image)resources.GetObject("btnNesSearch.Image");
+            btnNesSearch.Location = new Point(243, 45);
+            btnNesSearch.Name = "btnNesSearch";
+            btnNesSearch.Size = new Size(44, 44);
+            btnNesSearch.TabIndex = 5;
+            btnNesSearch.Text = "nes";
+            tlpGeneral.SetToolTip(btnNesSearch, "Click aqui para buscar solo juegos de Nintendo NES");
+            btnNesSearch.UseVisualStyleBackColor = true;
             // 
-            // pcbPrevCore
+            // btnAtariSearch
             // 
-            pcbPrevCore.Location = new Point(69, 165);
-            pcbPrevCore.Name = "pcbPrevCore";
-            pcbPrevCore.Size = new Size(259, 395);
-            pcbPrevCore.TabIndex = 4;
-            pcbPrevCore.TabStop = false;
+            btnAtariSearch.Image = (Image)resources.GetObject("btnAtariSearch.Image");
+            btnAtariSearch.Location = new Point(331, 45);
+            btnAtariSearch.Name = "btnAtariSearch";
+            btnAtariSearch.Size = new Size(44, 44);
+            btnAtariSearch.TabIndex = 4;
+            tlpGeneral.SetToolTip(btnAtariSearch, "Click aqui para buscar solo juegos de Atari 2000");
+            btnAtariSearch.UseVisualStyleBackColor = true;
             // 
-            // pcbNextCore
+            // btnPsOneSearch
             // 
-            pcbNextCore.Location = new Point(861, 165);
-            pcbNextCore.Name = "pcbNextCore";
-            pcbNextCore.Size = new Size(259, 395);
-            pcbNextCore.TabIndex = 6;
-            pcbNextCore.TabStop = false;
+            btnPsOneSearch.Image = (Image)resources.GetObject("btnPsOneSearch.Image");
+            btnPsOneSearch.Location = new Point(78, 45);
+            btnPsOneSearch.Name = "btnPsOneSearch";
+            btnPsOneSearch.Size = new Size(44, 44);
+            btnPsOneSearch.TabIndex = 3;
+            btnPsOneSearch.Text = "ps1";
+            tlpGeneral.SetToolTip(btnPsOneSearch, "Click aqui para buscar juegos solo de PlayStation Uno");
+            btnPsOneSearch.UseVisualStyleBackColor = true;
             // 
-            // pictureBox5
+            // lblSelectEmulator
             // 
-            pictureBox5.Image = (Image)resources.GetObject("pictureBox5.Image");
-            pictureBox5.Location = new Point(-4, -2);
-            pictureBox5.Name = "pictureBox5";
-            pictureBox5.Size = new Size(1276, 770);
-            pictureBox5.TabIndex = 8;
-            pictureBox5.TabStop = false;
+            lblSelectEmulator.AutoSize = true;
+            lblSelectEmulator.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSelectEmulator.Location = new Point(78, 19);
+            lblSelectEmulator.Name = "lblSelectEmulator";
+            lblSelectEmulator.Size = new Size(167, 16);
+            lblSelectEmulator.TabIndex = 2;
+            lblSelectEmulator.Text = "Seleccionar Emulador";
+            // 
+            // lblGameSearch
+            // 
+            lblGameSearch.AutoSize = true;
+            lblGameSearch.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblGameSearch.Location = new Point(473, 16);
+            lblGameSearch.Name = "lblGameSearch";
+            lblGameSearch.Size = new Size(103, 16);
+            lblGameSearch.TabIndex = 0;
+            lblGameSearch.Text = "Buscar Juego";
+            // 
+            // txtSearchGame
+            // 
+            txtSearchGame.Location = new Point(473, 35);
+            txtSearchGame.MaxLength = 50;
+            txtSearchGame.Multiline = true;
+            txtSearchGame.Name = "txtSearchGame";
+            txtSearchGame.Size = new Size(297, 44);
+            txtSearchGame.TabIndex = 0;
+            txtSearchGame.TextAlign = HorizontalAlignment.Center;
+            tlpGeneral.SetToolTip(txtSearchGame, "Escribe el nombre de un juego y presiona enter/el boton\r\nde la lupa para buscar.");
+            // 
+            // btnSearchGame
+            // 
+            btnSearchGame.Image = (Image)resources.GetObject("btnSearchGame.Image");
+            btnSearchGame.Location = new Point(776, 35);
+            btnSearchGame.Name = "btnSearchGame";
+            btnSearchGame.Size = new Size(44, 44);
+            btnSearchGame.TabIndex = 0;
+            tlpGeneral.SetToolTip(btnSearchGame, "Dale click aqui para buscar el juego.");
+            btnSearchGame.UseVisualStyleBackColor = true;
+            // 
+            // grpArcade
+            // 
+            grpArcade.Location = new Point(12, 107);
+            grpArcade.Name = "grpArcade";
+            grpArcade.Size = new Size(1326, 610);
+            grpArcade.TabIndex = 1;
+            grpArcade.TabStop = false;
             // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
-            ClientSize = new Size(1272, 767);
-            Controls.Add(pcbNextCore);
-            Controls.Add(pcbPrevCore);
-            Controls.Add(pcbMainCore);
-            Controls.Add(btnStartCore);
-            Controls.Add(btnNext);
-            Controls.Add(btnPrevious);
-            Controls.Add(pictureBox5);
+            BackColor = SystemColors.WindowFrame;
+            ClientSize = new Size(1350, 729);
+            Controls.Add(grpArcade);
+            Controls.Add(grpTopNavigator);
+            Icon = (Icon)resources.GetObject("$this.Icon");
             Name = "MainPage";
             Text = "Retro Fighters Arcade";
-            ((System.ComponentModel.ISupportInitialize)pcbMainCore).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pcbPrevCore).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pcbNextCore).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox5).EndInit();
+            grpTopNavigator.ResumeLayout(false);
+            grpTopNavigator.PerformLayout();
             ResumeLayout(false);
         }
 
         #endregion
 
-        private Button btnPrevious;
-        private Button btnNext;
-        private Button btnStartCore;
-        private PictureBox pcbMainCore;
-        private PictureBox pcbPrevCore;
-        private PictureBox pcbNextCore;
-        private PictureBox pictureBox5;
+        private GroupBox grpTopNavigator;
+        private GroupBox grpArcade;
+        private TextBox txtSearchGame;
+        private Button btnSearchGame;
+        private Label lblGameSearch;
+        private Label lblSelectEmulator;
+        private Button btnSegaSearch;
+        private Button btnNesSearch;
+        private Button btnAtariSearch;
+        private Button btnPsOneSearch;
+        private Button btnRefreshGames;
+        private ToolTip tlpGeneral;
     }
 }

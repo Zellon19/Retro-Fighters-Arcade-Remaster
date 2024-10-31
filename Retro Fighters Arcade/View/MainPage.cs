@@ -7,7 +7,7 @@ namespace Retro_Fighters_Arcade
             InitializeComponent();
         }
 
-
+        private static int _selectedCore = 0;
 
         private void btnNext_Click(object sender, EventArgs e)
         {
@@ -23,5 +23,11 @@ namespace Retro_Fighters_Arcade
         {
 
         }
+
+        private void lblPsOne_Click(object sender, EventArgs e)
+        {
+
+        }
+
     }
 }

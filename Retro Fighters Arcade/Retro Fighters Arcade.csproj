@@ -27,6 +27,10 @@
   <ItemGroup>
     <Folder Include="Controller\" />
     <Folder Include="Model\" />
+    <Folder Include="Resources\assets\games\images\atari\" />
+    <Folder Include="Resources\assets\games\images\nintendoNes\" />
+    <Folder Include="Resources\assets\games\images\PlayStation\" />
+    <Folder Include="Resources\assets\games\images\segaGenesis\" />
   </ItemGroup>
 
 </Project>
