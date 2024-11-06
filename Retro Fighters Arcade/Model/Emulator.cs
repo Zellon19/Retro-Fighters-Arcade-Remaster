@@ -48,7 +48,7 @@ namespace Retro_Fighters_Arcade.Model
         private Emulator? SearchEmulator()
         {
             foreach (Emulator emu in _emulatorList)
-                if (emu.Id == this.Id) return emu;
+                if (emu.Id.Equals(this.Id)) return emu;
 
             return null;
         }
@@ -57,7 +57,7 @@ namespace Retro_Fighters_Arcade.Model
         public Emulator? SearchEmulator(Emulator pEmulator)
         {
             foreach(Emulator emu in _emulatorList)
-                if(emu.Id == pEmulator.Id) return emu;
+                if(emu.Id.Equals(pEmulator.Id)) return emu;
 
             return null;
         }

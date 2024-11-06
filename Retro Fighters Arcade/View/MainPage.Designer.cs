@@ -41,8 +41,11 @@
             txtSearchGame = new TextBox();
             btnSearchGame = new Button();
             grpArcade = new GroupBox();
+            pbxGame1 = new PictureBox();
             tlpGeneral = new ToolTip(components);
             grpTopNavigator.SuspendLayout();
+            grpArcade.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pbxGame1).BeginInit();
             SuspendLayout();
             // 
             // grpTopNavigator
@@ -82,6 +85,7 @@
             btnSegaSearch.TabIndex = 6;
             tlpGeneral.SetToolTip(btnSegaSearch, "Click aqui para buscar juegos solo de SEGA Genesis");
             btnSegaSearch.UseVisualStyleBackColor = true;
+            btnSegaSearch.Click += btnSegaSearch_Click;
             // 
             // btnNesSearch
             // 
@@ -92,6 +96,7 @@
             btnNesSearch.TabIndex = 5;
             tlpGeneral.SetToolTip(btnNesSearch, "Click aqui para buscar solo juegos de Nintendo NES");
             btnNesSearch.UseVisualStyleBackColor = true;
+            btnNesSearch.Click += btnNesSearch_Click;
             // 
             // btnAtariSearch
             // 
@@ -102,6 +107,7 @@
             btnAtariSearch.TabIndex = 4;
             tlpGeneral.SetToolTip(btnAtariSearch, "Click aqui para buscar solo juegos de Atari 2000");
             btnAtariSearch.UseVisualStyleBackColor = true;
+            btnAtariSearch.Click += btnAtariSearch_Click;
             // 
             // btnPsOneSearch
             // 
@@ -112,6 +118,7 @@
             btnPsOneSearch.TabIndex = 3;
             tlpGeneral.SetToolTip(btnPsOneSearch, "Click aqui para buscar juegos solo de PlayStation Uno");
             btnPsOneSearch.UseVisualStyleBackColor = true;
+            btnPsOneSearch.Click += btnPsOneSearch_Click;
             // 
             // lblSelectEmulator
             // 
@@ -156,25 +163,42 @@
             // 
             // grpArcade
             // 
+            grpArcade.Controls.Add(pbxGame1);
             grpArcade.Location = new Point(12, 107);
             grpArcade.Name = "grpArcade";
             grpArcade.Size = new Size(1326, 610);
             grpArcade.TabIndex = 1;
             grpArcade.TabStop = false;
             // 
+            // pbxGame1
+            // 
+            pbxGame1.Cursor = Cursors.Hand;
+            pbxGame1.Image = Properties.Resources.atariSpaceInvadersLogo;
+            pbxGame1.Location = new Point(24, 22);
+            pbxGame1.Name = "pbxGame1";
+            pbxGame1.Size = new Size(221, 304);
+            pbxGame1.TabIndex = 0;
+            pbxGame1.TabStop = false;
+            pbxGame1.Click += pictureBox1_Click;
+            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
             AutoScaleMode = AutoScaleMode.Font;
+            AutoSize = true;
             BackColor = SystemColors.WindowFrame;
             ClientSize = new Size(1350, 729);
             Controls.Add(grpArcade);
             Controls.Add(grpTopNavigator);
             Icon = (Icon)resources.GetObject("$this.Icon");
+            MaximumSize = new Size(1366, 768);
+            MinimumSize = new Size(1364, 726);
             Name = "MainPage";
             Text = "Retro Fighters Arcade";
             grpTopNavigator.ResumeLayout(false);
             grpTopNavigator.PerformLayout();
+            grpArcade.ResumeLayout(false);
+            ((System.ComponentModel.ISupportInitialize)pbxGame1).EndInit();
             ResumeLayout(false);
         }
 
@@ -192,5 +216,6 @@
         private Button btnPsOneSearch;
         private Button btnRefreshGames;
         private ToolTip tlpGeneral;
+        private PictureBox pbxGame1;
     }
 }
