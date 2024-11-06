@@ -83,7 +83,7 @@
             btnSegaSearch.Name = "btnSegaSearch";
             btnSegaSearch.Size = new Size(44, 44);
             btnSegaSearch.TabIndex = 6;
-            tlpGeneral.SetToolTip(btnSegaSearch, "Click aqui para buscar juegos solo de SEGA Genesis");
+            tlpGeneral.SetToolTip(btnSegaSearch, "Click aqui para filtrar juegos solo de SEGA Genesis");
             btnSegaSearch.UseVisualStyleBackColor = true;
             btnSegaSearch.Click += btnSegaSearch_Click;
             // 
@@ -94,7 +94,7 @@
             btnNesSearch.Name = "btnNesSearch";
             btnNesSearch.Size = new Size(44, 44);
             btnNesSearch.TabIndex = 5;
-            tlpGeneral.SetToolTip(btnNesSearch, "Click aqui para buscar solo juegos de Nintendo NES");
+            tlpGeneral.SetToolTip(btnNesSearch, "Click aqui para buscar filtrar juegos de Nintendo NES");
             btnNesSearch.UseVisualStyleBackColor = true;
             btnNesSearch.Click += btnNesSearch_Click;
             // 
@@ -105,7 +105,7 @@
             btnAtariSearch.Name = "btnAtariSearch";
             btnAtariSearch.Size = new Size(44, 44);
             btnAtariSearch.TabIndex = 4;
-            tlpGeneral.SetToolTip(btnAtariSearch, "Click aqui para buscar solo juegos de Atari 2000");
+            tlpGeneral.SetToolTip(btnAtariSearch, "Click aqui para filtrar juegos de Atari 2000");
             btnAtariSearch.UseVisualStyleBackColor = true;
             btnAtariSearch.Click += btnAtariSearch_Click;
             // 
@@ -116,7 +116,7 @@
             btnPsOneSearch.Name = "btnPsOneSearch";
             btnPsOneSearch.Size = new Size(44, 44);
             btnPsOneSearch.TabIndex = 3;
-            tlpGeneral.SetToolTip(btnPsOneSearch, "Click aqui para buscar juegos solo de PlayStation Uno");
+            tlpGeneral.SetToolTip(btnPsOneSearch, "Click aqui para filtrar juegos solo de PlayStation Uno");
             btnPsOneSearch.UseVisualStyleBackColor = true;
             btnPsOneSearch.Click += btnPsOneSearch_Click;
             // 

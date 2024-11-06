@@ -46,7 +46,7 @@ namespace Retro_Fighters_Arcade.Model
         private Game? SearchGame()
         {
             foreach (Game game in _gameList)
-                if (game.Id == this.Id) return game;
+                if (game.Id.Equals(this.Id)) return game;
 
             return null;
         }
@@ -55,7 +55,7 @@ namespace Retro_Fighters_Arcade.Model
         public Game? SearchGame(Game pGame)
         {
             foreach(Game game in _gameList)
-                if(game.Id == pGame.Id) return game;
+                if(game.Id.Equals(pGame.Id)) return game;
 
             return null;
         }
