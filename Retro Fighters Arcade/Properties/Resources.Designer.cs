@@ -63,16 +63,6 @@ namespace Retro_Fighters_Arcade.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap Atari_Logo {
-            get {
-                object obj = ResourceManager.GetObject("Atari Logo", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap atariSpaceInvadersLogo {
             get {
                 object obj = ResourceManager.GetObject("atariSpaceInvadersLogo", resourceCulture);
@@ -83,29 +73,9 @@ namespace Retro_Fighters_Arcade.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Drawing.Bitmap.
         /// </summary>
-        internal static System.Drawing.Bitmap crash_bandicoot_scus_94900 {
-            get {
-                object obj = ResourceManager.GetObject("crash-bandicoot-scus-94900", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
         internal static System.Drawing.Bitmap images {
             get {
                 object obj = ResourceManager.GetObject("images", resourceCulture);
-                return ((System.Drawing.Bitmap)(obj));
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized resource of type System.Drawing.Bitmap.
-        /// </summary>
-        internal static System.Drawing.Bitmap PlayStation {
-            get {
-                object obj = ResourceManager.GetObject("PlayStation", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
             }
         }

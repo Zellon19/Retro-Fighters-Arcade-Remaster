@@ -7,7 +7,64 @@
     <Nullable>enable</Nullable>
     <UseWindowsForms>true</UseWindowsForms>
     <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>Resources\assets\gui\window_icon.ico</ApplicationIcon>
   </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="Resources\assets\games\images\atari\asteroids.png" />
+    <None Remove="Resources\assets\games\images\atari\atariSpaceInvadersLogo.jpg" />
+    <None Remove="Resources\assets\games\images\atari\e.t.png" />
+    <None Remove="Resources\assets\games\images\atari\frogger.png" />
+    <None Remove="Resources\assets\games\images\nintendoNes\donkey-kong-classics.png" />
+    <None Remove="Resources\assets\games\images\nintendoNes\excitebike-vs.png" />
+    <None Remove="Resources\assets\games\images\nintendoNes\kirby-s-adventure %281%29.png" />
+    <None Remove="Resources\assets\games\images\nintendoNes\nesTetrisLogo.jpg" />
+    <None Remove="Resources\assets\games\images\nintendoNes\vs-super-mario-bros-vs.png" />
+    <None Remove="Resources\assets\games\images\PlayStation\crash-bandicoot-scus-94900.png" />
+    <None Remove="Resources\assets\games\images\PlayStation\gran-turismo-2-simulation-mode-scus-94488.png" />
+    <None Remove="Resources\assets\games\images\PlayStation\pepsiman.png" />
+    <None Remove="Resources\assets\games\images\PlayStation\TEKKEN %281%29.png" />
+    <None Remove="Resources\assets\games\images\segaGenesis\doom-32x.png" />
+    <None Remove="Resources\assets\games\images\segaGenesis\mortal-combat-5-unl-c.png" />
+    <None Remove="Resources\assets\games\images\segaGenesis\shinobi-3-return-of-the-ninja-master.png" />
+    <None Remove="Resources\assets\games\images\segaGenesis\sonic-the-hedgehog-jue.png" />
+    <None Remove="Resources\assets\games\images\segaGenesis\super-street-fighter-ii-the-new-challengers-b1.png" />
+    <None Remove="Resources\assets\gui\atari_logo_icon.png" />
+    <None Remove="Resources\assets\gui\boton derecha.jpg" />
+    <None Remove="Resources\assets\gui\boton izquierda.jpg" />
+    <None Remove="Resources\assets\gui\nintendo_logo_icon-blacknwhite.png" />
+    <None Remove="Resources\assets\gui\nintendo_logo_icon.png" />
+    <None Remove="Resources\assets\gui\ps1_loco_icon-blacknwhite.png" />
+    <None Remove="Resources\assets\gui\ps1_loco_icon.png" />
+    <None Remove="Resources\assets\gui\refresh_games_icon.png" />
+    <None Remove="Resources\assets\gui\search_icon.png" />
+    <None Remove="Resources\assets\gui\search_icon_v2.png" />
+    <None Remove="Resources\assets\gui\sega_logo_icon-blacknwhite.png" />
+    <None Remove="Resources\assets\gui\sega_logo_icon.png" />
+    <None Remove="Resources\assets\gui\start button.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Resources\assets\games\images\atari\asteroids.png" />
+    <Resource Include="Resources\assets\games\images\atari\atariSpaceInvadersLogo.jpg" />
+    <Resource Include="Resources\assets\games\images\atari\e.t.png" />
+    <Resource Include="Resources\assets\games\images\atari\frogger.png" />
+    <Resource Include="Resources\assets\games\images\nintendoNes\donkey-kong-classics.png" />
+    <Resource Include="Resources\assets\games\images\nintendoNes\excitebike-vs.png" />
+    <Resource Include="Resources\assets\games\images\nintendoNes\kirby-s-adventure (1).png" />
+    <Resource Include="Resources\assets\games\images\nintendoNes\nesTetrisLogo.jpg" />
+    <Resource Include="Resources\assets\games\images\nintendoNes\vs-super-mario-bros-vs.png" />
+    <Resource Include="Resources\assets\games\images\PlayStation\crash-bandicoot-scus-94900.png" />
+    <Resource Include="Resources\assets\games\images\PlayStation\gran-turismo-2-simulation-mode-scus-94488.png" />
+    <Resource Include="Resources\assets\games\images\PlayStation\pepsiman.png" />
+    <Resource Include="Resources\assets\games\images\PlayStation\TEKKEN (1).png" />
+    <Resource Include="Resources\assets\games\images\segaGenesis\doom-32x.png" />
+    <Resource Include="Resources\assets\games\images\segaGenesis\mortal-combat-5-unl-c.png" />
+    <Resource Include="Resources\assets\games\images\segaGenesis\shinobi-3-return-of-the-ninja-master.png" />
+    <Resource Include="Resources\assets\games\images\segaGenesis\sonic-the-hedgehog-jue.png" />
+    <Resource Include="Resources\assets\games\images\segaGenesis\super-street-fighter-ii-the-new-challengers-b1.png" />
+    <Resource Include="Resources\assets\gui\window_icon.ico" />
+  </ItemGroup>
 
   <ItemGroup>
     <Compile Update="Properties\Resources.Designer.cs">
@@ -25,10 +82,19 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Folder Include="Resources\assets\games\images\atari\" />
-    <Folder Include="Resources\assets\games\images\nintendoNes\" />
-    <Folder Include="Resources\assets\games\images\PlayStation\" />
-    <Folder Include="Resources\assets\games\images\segaGenesis\" />
+    <Resource Include="Resources\assets\gui\atari_logo_icon.png" />
+    <Resource Include="Resources\assets\gui\boton derecha.jpg" />
+    <Resource Include="Resources\assets\gui\boton izquierda.jpg" />
+    <Resource Include="Resources\assets\gui\nintendo_logo_icon-blacknwhite.png" />
+    <Resource Include="Resources\assets\gui\nintendo_logo_icon.png" />
+    <Resource Include="Resources\assets\gui\ps1_loco_icon-blacknwhite.png" />
+    <Resource Include="Resources\assets\gui\ps1_loco_icon.png" />
+    <Resource Include="Resources\assets\gui\refresh_games_icon.png" />
+    <Resource Include="Resources\assets\gui\search_icon.png" />
+    <Resource Include="Resources\assets\gui\search_icon_v2.png" />
+    <Resource Include="Resources\assets\gui\sega_logo_icon-blacknwhite.png" />
+    <Resource Include="Resources\assets\gui\sega_logo_icon.png" />
+    <Resource Include="Resources\assets\gui\start button.png" />
   </ItemGroup>
 
 </Project>

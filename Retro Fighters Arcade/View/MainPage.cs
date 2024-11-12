@@ -1,3 +1,4 @@
+using Retro_Fighters_Arcade.Properties;
 using System.Windows.Forms.VisualStyles;
 
 namespace Retro_Fighters_Arcade
@@ -20,41 +21,44 @@ namespace Retro_Fighters_Arcade
 
         private void btnPsOneSearch_Click(object sender, EventArgs e)
         {
+            if (toggledSearchButtons[0])
+            {
+                this.btnPsOneSearch.Enabled = false;
+            }
+            else
+            {
+                this.btnPsOneSearch.Enabled = true;
+            }
             toggledSearchButtons[0] = !toggledSearchButtons[0];
-            this.UpdateDisplayedEmulators();
         }
 
         private void btnSegaSearch_Click(object sender, EventArgs e)
         {
             toggledSearchButtons[1] = !toggledSearchButtons[1];
-            this.UpdateDisplayedEmulators();
+            if (toggledSearchButtons[1])
+            {
+
+            }
         }
 
         private void btnNesSearch_Click(object sender, EventArgs e)
         {
             toggledSearchButtons[2] = !toggledSearchButtons[2];
-            this.UpdateDisplayedEmulators();
+            if (toggledSearchButtons[2])
+            {
+
+            }
         }
 
         private void btnAtariSearch_Click(object sender, EventArgs e)
         {
             toggledSearchButtons[3] = !toggledSearchButtons[3];
-            this.UpdateDisplayedEmulators();
-        }
-
-        private void UpdateDisplayedEmulators()
-        {
-            for (int i = 0; i < toggledSearchButtons.Length; i++)
+            if (toggledSearchButtons[3])
             {
-                if (!toggledSearchButtons[i])
-                {
-                    // here we deactivate the games that belong to the emulator in that pos
-                    // but since we broke asf we just show a dialogue lol
-                    MessageBox.Show("Desactivado emulador: " + i);
-                }
+                
             }
-        }
-
+        }  
         #endregion
+
     }
 }
