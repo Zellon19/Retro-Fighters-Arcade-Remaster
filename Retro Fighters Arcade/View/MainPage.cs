@@ -8,6 +8,7 @@ namespace Retro_Fighters_Arcade
         public MainPage()
         {
             InitializeComponent();
+            this.grpTopNavigator.
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)

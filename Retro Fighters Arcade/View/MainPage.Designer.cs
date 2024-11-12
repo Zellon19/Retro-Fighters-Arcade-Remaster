@@ -150,6 +150,7 @@
             lblGameSearch.Size = new Size(145, 21);
             lblGameSearch.TabIndex = 0;
             lblGameSearch.Text = "Buscar Juego";
+            lblGameSearch.Click += lblGameSearch_Click;
             // 
             // lblSelectEmulator
             // 
@@ -194,7 +195,7 @@
             Controls.Add(panel1);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(1366, 768);
-            MinimumSize = new Size(1364, 726);
+            MinimumSize = new Size(1278, 726);
             Name = "MainPage";
             Text = "Retro Fighters Arcade";
             panel1.ResumeLayout(false);
