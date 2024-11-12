@@ -50,6 +50,8 @@
             // 
             // grpTopNavigator
             // 
+            grpTopNavigator.AutoSizeMode = AutoSizeMode.GrowAndShrink;
+            grpTopNavigator.BackColor = Color.DimGray;
             grpTopNavigator.Controls.Add(btnRefreshGames);
             grpTopNavigator.Controls.Add(btnSegaSearch);
             grpTopNavigator.Controls.Add(btnNesSearch);
@@ -59,17 +61,19 @@
             grpTopNavigator.Controls.Add(lblGameSearch);
             grpTopNavigator.Controls.Add(txtSearchGame);
             grpTopNavigator.Controls.Add(btnSearchGame);
-            grpTopNavigator.Location = new Point(12, 12);
+            grpTopNavigator.Location = new Point(12, 9);
+            grpTopNavigator.Margin = new Padding(0);
             grpTopNavigator.Name = "grpTopNavigator";
-            grpTopNavigator.Size = new Size(1326, 100);
+            grpTopNavigator.Padding = new Padding(0);
+            grpTopNavigator.Size = new Size(1326, 107);
             grpTopNavigator.TabIndex = 0;
             grpTopNavigator.TabStop = false;
-            grpTopNavigator.Text = "Navegador";
+            grpTopNavigator.Enter += grpTopNavigator_Enter;
             // 
             // btnRefreshGames
             // 
             btnRefreshGames.Image = (Image)resources.GetObject("btnRefreshGames.Image");
-            btnRefreshGames.Location = new Point(826, 35);
+            btnRefreshGames.Location = new Point(826, 45);
             btnRefreshGames.Name = "btnRefreshGames";
             btnRefreshGames.Size = new Size(44, 44);
             btnRefreshGames.TabIndex = 7;
@@ -123,26 +127,27 @@
             // lblSelectEmulator
             // 
             lblSelectEmulator.AutoSize = true;
-            lblSelectEmulator.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblSelectEmulator.Location = new Point(78, 19);
+            lblSelectEmulator.Font = new Font("Minecraft", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblSelectEmulator.Location = new Point(75, 16);
             lblSelectEmulator.Name = "lblSelectEmulator";
-            lblSelectEmulator.Size = new Size(167, 16);
+            lblSelectEmulator.Size = new Size(197, 16);
             lblSelectEmulator.TabIndex = 2;
             lblSelectEmulator.Text = "Seleccionar Emulador";
             // 
             // lblGameSearch
             // 
             lblGameSearch.AutoSize = true;
-            lblGameSearch.Font = new Font("SimSun", 12F, FontStyle.Regular, GraphicsUnit.Point, 0);
-            lblGameSearch.Location = new Point(473, 16);
+            lblGameSearch.Font = new Font("Minecraft", 12F, FontStyle.Bold, GraphicsUnit.Point, 0);
+            lblGameSearch.Location = new Point(470, 13);
             lblGameSearch.Name = "lblGameSearch";
-            lblGameSearch.Size = new Size(103, 16);
+            lblGameSearch.Size = new Size(124, 16);
             lblGameSearch.TabIndex = 0;
             lblGameSearch.Text = "Buscar Juego";
+            lblGameSearch.Click += lblGameSearch_Click;
             // 
             // txtSearchGame
             // 
-            txtSearchGame.Location = new Point(473, 35);
+            txtSearchGame.Location = new Point(473, 45);
             txtSearchGame.MaxLength = 50;
             txtSearchGame.Multiline = true;
             txtSearchGame.Name = "txtSearchGame";
@@ -154,7 +159,7 @@
             // btnSearchGame
             // 
             btnSearchGame.Image = (Image)resources.GetObject("btnSearchGame.Image");
-            btnSearchGame.Location = new Point(776, 35);
+            btnSearchGame.Location = new Point(776, 45);
             btnSearchGame.Name = "btnSearchGame";
             btnSearchGame.Size = new Size(44, 44);
             btnSearchGame.TabIndex = 0;
@@ -163,18 +168,20 @@
             // 
             // grpArcade
             // 
+            grpArcade.BackColor = Color.Transparent;
             grpArcade.Controls.Add(pbxGame1);
             grpArcade.Location = new Point(12, 107);
             grpArcade.Name = "grpArcade";
             grpArcade.Size = new Size(1326, 610);
             grpArcade.TabIndex = 1;
             grpArcade.TabStop = false;
+            grpArcade.Enter += grpArcade_Enter;
             // 
             // pbxGame1
             // 
             pbxGame1.Cursor = Cursors.Hand;
             pbxGame1.Image = Properties.Resources.atariSpaceInvadersLogo;
-            pbxGame1.Location = new Point(24, 22);
+            pbxGame1.Location = new Point(20, 103);
             pbxGame1.Name = "pbxGame1";
             pbxGame1.Size = new Size(221, 304);
             pbxGame1.TabIndex = 0;
@@ -187,14 +194,15 @@
             AutoScaleMode = AutoScaleMode.Font;
             AutoSize = true;
             BackColor = SystemColors.WindowFrame;
-            ClientSize = new Size(1350, 729);
+            BackgroundImage = (Image)resources.GetObject("$this.BackgroundImage");
+            ClientSize = new Size(1284, 729);
             Controls.Add(grpArcade);
             Controls.Add(grpTopNavigator);
             Icon = (Icon)resources.GetObject("$this.Icon");
             MaximumSize = new Size(1366, 768);
-            MinimumSize = new Size(1364, 726);
+            MinimumSize = new Size(1278, 726);
             Name = "MainPage";
-            Text = "Retro Fighters Arcade";
+            Text = "+";
             grpTopNavigator.ResumeLayout(false);
             grpTopNavigator.PerformLayout();
             grpArcade.ResumeLayout(false);

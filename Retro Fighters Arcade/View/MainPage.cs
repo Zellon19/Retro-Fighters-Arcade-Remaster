@@ -7,6 +7,7 @@ namespace Retro_Fighters_Arcade
         public MainPage()
         {
             InitializeComponent();
+            this.grpTopNavigator.
         }
 
         private void pictureBox1_Click(object sender, EventArgs e)
@@ -56,5 +57,20 @@ namespace Retro_Fighters_Arcade
         }
 
         #endregion
+
+        private void grpArcade_Enter(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lblGameSearch_Click(object sender, EventArgs e)
+        {
+
+        }
+
+        private void grpTopNavigator_Enter(object sender, EventArgs e)
+        {
+
+        }
     }
 }
