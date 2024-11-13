@@ -37,7 +37,6 @@
             btnAtariSearch = new Button();
             btnNesSearch = new Button();
             btnSegaSearch = new Button();
-            btnRefreshGames = new Button();
             btnPsOneSearchDisabled = new Button();
             btnSegaSearchDisabled = new Button();
             btnNesSearchDisabled = new Button();
@@ -121,16 +120,6 @@
             btnSegaSearch.UseVisualStyleBackColor = true;
             btnSegaSearch.Click += btnSegaSearch_Click;
             // 
-            // btnRefreshGames
-            // 
-            btnRefreshGames.Image = (Image)resources.GetObject("btnRefreshGames.Image");
-            btnRefreshGames.Location = new Point(826, 33);
-            btnRefreshGames.Name = "btnRefreshGames";
-            btnRefreshGames.Size = new Size(44, 44);
-            btnRefreshGames.TabIndex = 7;
-            tlpGeneral.SetToolTip(btnRefreshGames, "Dale click aqui para refrescar\r\nla lista de juegos.");
-            btnRefreshGames.UseVisualStyleBackColor = true;
-            // 
             // btnPsOneSearchDisabled
             // 
             btnPsOneSearchDisabled.Image = (Image)resources.GetObject("btnPsOneSearchDisabled.Image");
@@ -180,7 +169,6 @@
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
-            panel1.Controls.Add(btnRefreshGames);
             panel1.Controls.Add(txtSearchGame);
             panel1.Controls.Add(lblGameSearch);
             panel1.Controls.Add(lblSelectEmulator);
@@ -266,7 +254,6 @@
         private ToolTip tlpGeneral;
         private Panel panel1;
         private Button btnSegaSearch;
-        private Button btnRefreshGames;
         private Button btnNesSearch;
         private TextBox txtSearchGame;
         private Button btnAtariSearch;

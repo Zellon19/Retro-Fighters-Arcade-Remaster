@@ -35,6 +35,17 @@ namespace Retro_Fighters_Arcade.Model
              "C:\\Users\\axela\\source\\repos\\Retro Fighters Arcade\\Retro Fighters Arcade\\Resources\\assets\\ROMs\\segagenesis\\sonic.md",
              "C:\\Users\\axela\\source\\repos\\Retro Fighters Arcade\\Retro Fighters Arcade\\Resources\\assets\\ROMs\\segagenesis\\superStreetFighter2.bin"];
 
+        private readonly string _atariCorePath = "C:\\Users\\54264632\\Source\\Repos\\Zellon19\\Retro-Fighters-Arcade-Remaster\\Retro Fighters Arcade\\Resources\\assets\\cores\\stella_libretro_atari.dll";
+        private readonly string _nesCorePath = "C:\\Users\\54264632\\Source\\Repos\\Zellon19\\Retro-Fighters-Arcade-Remaster\\Retro Fighters Arcade\\Resources\\assets\\cores\\snes9x2010_libretro.dll";
+        private readonly string _psOneCorePath = "C:\\Users\\54264632\\Source\\Repos\\Zellon19\\Retro-Fighters-Arcade-Remaster\\Retro Fighters Arcade\\Resources\\assets\\cores";
+        private readonly string _segaGenCorePath = "C:\\Users\\54264632\\Source\\Repos\\Zellon19\\Retro-Fighters-Arcade-Remaster\\Retro Fighters Arcade\\Resources\\assets\\cores\\fceumm_libretro_sega_genesis.dll";
+
+        public string AtariCorePath { get { return _atariCorePath; } }
+        public string NesCorePath { get { return _nesCorePath; } }
+        public string PsOneCorePath { get { return _psOneCorePath; } }
+        public string SegaGenesisCorePath { get { return _segaGenCorePath; } }
+
+
         public List<string> AtariPathList { get { return _atariPathList; } }
         public List<string> SnesPathList { get {return _nesPathList; } }
         public List<string> PsOnePathList { get { return _psOnePathList; } }
