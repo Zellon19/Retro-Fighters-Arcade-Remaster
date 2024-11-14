@@ -45,19 +45,53 @@
             lblGameSearch = new Label();
             lblSelectEmulator = new Label();
             panel2 = new Panel();
+            pboPsOnePepsiman = new PictureBox();
+            pboPsOneGranTurismo2 = new PictureBox();
+            pboPsOneCrashBandicoot = new PictureBox();
+            pboNesVsSuperMarioBros = new PictureBox();
+            pboNesTetris = new PictureBox();
+            pboNesKirbysAdventure = new PictureBox();
+            pboNesExciteBike = new PictureBox();
+            pboNesDKongClassic = new PictureBox();
+            pboAtariFrogger = new PictureBox();
             lblDebug = new Label();
             pboStartGame = new PictureBox();
-            label5 = new Label();
-            label4 = new Label();
-            label3 = new Label();
-            label2 = new Label();
-            label1 = new Label();
-            pictureBox1 = new PictureBox();
+            lblGameName = new Label();
+            lblGameConsole = new Label();
+            lblGameLaunch = new Label();
+            lblGameDeveloper = new Label();
+            lblGameDescription = new Label();
             lboGameList = new ListBox();
+            pboAtariAsteroids = new PictureBox();
+            pboAtariEt = new PictureBox();
+            pboAtariSpaceInvaders = new PictureBox();
+            pboPsOneMarvelVsCapcom = new PictureBox();
+            pboSegaGenDoom32 = new PictureBox();
+            pboSegaGenMortalKombat5 = new PictureBox();
+            pboSegaGenShinobi3 = new PictureBox();
+            pboSegaGenSonicTheHedgehog = new PictureBox();
+            pboSegaGenSuperStreetFighter2 = new PictureBox();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pboPsOnePepsiman).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboPsOneGranTurismo2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboPsOneCrashBandicoot).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesVsSuperMarioBros).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesTetris).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesKirbysAdventure).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesExciteBike).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesDKongClassic).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboAtariFrogger).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboStartGame).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboAtariAsteroids).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboAtariEt).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboAtariSpaceInvaders).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboPsOneMarvelVsCapcom).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenDoom32).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenMortalKombat5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenShinobi3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenSonicTheHedgehog).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenSuperStreetFighter2).BeginInit();
             SuspendLayout();
             // 
             // btnSearchGame
@@ -221,19 +255,117 @@
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
+            panel2.Controls.Add(pboSegaGenSuperStreetFighter2);
+            panel2.Controls.Add(pboSegaGenSonicTheHedgehog);
+            panel2.Controls.Add(pboSegaGenShinobi3);
+            panel2.Controls.Add(pboSegaGenMortalKombat5);
+            panel2.Controls.Add(pboSegaGenDoom32);
+            panel2.Controls.Add(pboPsOneMarvelVsCapcom);
+            panel2.Controls.Add(pboPsOnePepsiman);
+            panel2.Controls.Add(pboPsOneGranTurismo2);
+            panel2.Controls.Add(pboPsOneCrashBandicoot);
+            panel2.Controls.Add(pboNesVsSuperMarioBros);
+            panel2.Controls.Add(pboNesTetris);
+            panel2.Controls.Add(pboNesKirbysAdventure);
+            panel2.Controls.Add(pboNesExciteBike);
+            panel2.Controls.Add(pboNesDKongClassic);
+            panel2.Controls.Add(pboAtariFrogger);
             panel2.Controls.Add(lblDebug);
             panel2.Controls.Add(pboStartGame);
-            panel2.Controls.Add(label5);
-            panel2.Controls.Add(label4);
-            panel2.Controls.Add(label3);
-            panel2.Controls.Add(label2);
-            panel2.Controls.Add(label1);
-            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(lblGameName);
+            panel2.Controls.Add(lblGameConsole);
+            panel2.Controls.Add(lblGameLaunch);
+            panel2.Controls.Add(lblGameDeveloper);
+            panel2.Controls.Add(lblGameDescription);
             panel2.Controls.Add(lboGameList);
+            panel2.Controls.Add(pboAtariAsteroids);
+            panel2.Controls.Add(pboAtariEt);
+            panel2.Controls.Add(pboAtariSpaceInvaders);
             panel2.Location = new Point(12, 107);
             panel2.Name = "panel2";
             panel2.Size = new Size(1326, 610);
             panel2.TabIndex = 2;
+            // 
+            // pboPsOnePepsiman
+            // 
+            pboPsOnePepsiman.BackgroundImage = (Image)resources.GetObject("pboPsOnePepsiman.BackgroundImage");
+            pboPsOnePepsiman.Location = new Point(459, 92);
+            pboPsOnePepsiman.Name = "pboPsOnePepsiman";
+            pboPsOnePepsiman.Size = new Size(219, 309);
+            pboPsOnePepsiman.TabIndex = 19;
+            pboPsOnePepsiman.TabStop = false;
+            // 
+            // pboPsOneGranTurismo2
+            // 
+            pboPsOneGranTurismo2.BackgroundImage = (Image)resources.GetObject("pboPsOneGranTurismo2.BackgroundImage");
+            pboPsOneGranTurismo2.Location = new Point(458, 92);
+            pboPsOneGranTurismo2.Name = "pboPsOneGranTurismo2";
+            pboPsOneGranTurismo2.Size = new Size(219, 309);
+            pboPsOneGranTurismo2.TabIndex = 18;
+            pboPsOneGranTurismo2.TabStop = false;
+            // 
+            // pboPsOneCrashBandicoot
+            // 
+            pboPsOneCrashBandicoot.BackgroundImage = (Image)resources.GetObject("pboPsOneCrashBandicoot.BackgroundImage");
+            pboPsOneCrashBandicoot.Location = new Point(458, 92);
+            pboPsOneCrashBandicoot.Name = "pboPsOneCrashBandicoot";
+            pboPsOneCrashBandicoot.Size = new Size(219, 309);
+            pboPsOneCrashBandicoot.TabIndex = 17;
+            pboPsOneCrashBandicoot.TabStop = false;
+            // 
+            // pboNesVsSuperMarioBros
+            // 
+            pboNesVsSuperMarioBros.BackgroundImage = (Image)resources.GetObject("pboNesVsSuperMarioBros.BackgroundImage");
+            pboNesVsSuperMarioBros.Location = new Point(458, 92);
+            pboNesVsSuperMarioBros.Name = "pboNesVsSuperMarioBros";
+            pboNesVsSuperMarioBros.Size = new Size(219, 309);
+            pboNesVsSuperMarioBros.TabIndex = 16;
+            pboNesVsSuperMarioBros.TabStop = false;
+            // 
+            // pboNesTetris
+            // 
+            pboNesTetris.BackgroundImage = (Image)resources.GetObject("pboNesTetris.BackgroundImage");
+            pboNesTetris.Location = new Point(459, 92);
+            pboNesTetris.Name = "pboNesTetris";
+            pboNesTetris.Size = new Size(219, 309);
+            pboNesTetris.TabIndex = 15;
+            pboNesTetris.TabStop = false;
+            // 
+            // pboNesKirbysAdventure
+            // 
+            pboNesKirbysAdventure.BackgroundImage = (Image)resources.GetObject("pboNesKirbysAdventure.BackgroundImage");
+            pboNesKirbysAdventure.Location = new Point(459, 92);
+            pboNesKirbysAdventure.Name = "pboNesKirbysAdventure";
+            pboNesKirbysAdventure.Size = new Size(219, 309);
+            pboNesKirbysAdventure.TabIndex = 14;
+            pboNesKirbysAdventure.TabStop = false;
+            // 
+            // pboNesExciteBike
+            // 
+            pboNesExciteBike.BackgroundImage = (Image)resources.GetObject("pboNesExciteBike.BackgroundImage");
+            pboNesExciteBike.Location = new Point(458, 92);
+            pboNesExciteBike.Name = "pboNesExciteBike";
+            pboNesExciteBike.Size = new Size(219, 309);
+            pboNesExciteBike.TabIndex = 13;
+            pboNesExciteBike.TabStop = false;
+            // 
+            // pboNesDKongClassic
+            // 
+            pboNesDKongClassic.BackgroundImage = (Image)resources.GetObject("pboNesDKongClassic.BackgroundImage");
+            pboNesDKongClassic.Location = new Point(459, 92);
+            pboNesDKongClassic.Name = "pboNesDKongClassic";
+            pboNesDKongClassic.Size = new Size(219, 309);
+            pboNesDKongClassic.TabIndex = 12;
+            pboNesDKongClassic.TabStop = false;
+            // 
+            // pboAtariFrogger
+            // 
+            pboAtariFrogger.BackgroundImage = (Image)resources.GetObject("pboAtariFrogger.BackgroundImage");
+            pboAtariFrogger.Location = new Point(459, 92);
+            pboAtariFrogger.Name = "pboAtariFrogger";
+            pboAtariFrogger.Size = new Size(219, 309);
+            pboAtariFrogger.TabIndex = 11;
+            pboAtariFrogger.TabStop = false;
             // 
             // lblDebug
             // 
@@ -247,71 +379,68 @@
             // pboStartGame
             // 
             pboStartGame.BackgroundImage = (Image)resources.GetObject("pboStartGame.BackgroundImage");
-            pboStartGame.Location = new Point(723, 277);
+            pboStartGame.Location = new Point(878, 353);
             pboStartGame.Name = "pboStartGame";
             pboStartGame.Size = new Size(200, 91);
             pboStartGame.TabIndex = 7;
             pboStartGame.TabStop = false;
             pboStartGame.Click += pboStartGame_Click;
             // 
-            // label5
+            // lblGameName
             // 
-            label5.AutoSize = true;
-            label5.ForeColor = SystemColors.ControlLightLight;
-            label5.Location = new Point(458, 404);
-            label5.Name = "label5";
-            label5.Size = new Size(37, 15);
-            label5.TabIndex = 6;
-            label5.Text = "name";
+            lblGameName.AutoSize = true;
+            lblGameName.Font = new Font("ArcadeClassic", 11.999999F);
+            lblGameName.ForeColor = SystemColors.ControlLightLight;
+            lblGameName.Location = new Point(459, 404);
+            lblGameName.Name = "lblGameName";
+            lblGameName.Size = new Size(187, 16);
+            lblGameName.TabIndex = 6;
+            lblGameName.Text = "Nombre:  Space Invaders";
             // 
-            // label4
+            // lblGameConsole
             // 
-            label4.AutoSize = true;
-            label4.ForeColor = SystemColors.ControlLightLight;
-            label4.Location = new Point(458, 455);
-            label4.Name = "label4";
-            label4.Size = new Size(48, 15);
-            label4.TabIndex = 5;
-            label4.Text = "consola";
+            lblGameConsole.AutoSize = true;
+            lblGameConsole.Font = new Font("ArcadeClassic", 11.999999F);
+            lblGameConsole.ForeColor = SystemColors.ControlLightLight;
+            lblGameConsole.Location = new Point(459, 428);
+            lblGameConsole.Name = "lblGameConsole";
+            lblGameConsole.Size = new Size(160, 16);
+            lblGameConsole.TabIndex = 5;
+            lblGameConsole.Text = "Consola:  Atari 2600";
             // 
-            // label3
+            // lblGameLaunch
             // 
-            label3.AutoSize = true;
-            label3.ForeColor = SystemColors.ControlLightLight;
-            label3.Location = new Point(458, 507);
-            label3.Name = "label3";
-            label3.Size = new Size(95, 15);
-            label3.TabIndex = 4;
-            label3.Text = "ano lanzamiento";
+            lblGameLaunch.AutoSize = true;
+            lblGameLaunch.Font = new Font("ArcadeClassic", 11.999999F);
+            lblGameLaunch.ForeColor = SystemColors.ControlLightLight;
+            lblGameLaunch.Location = new Point(459, 454);
+            lblGameLaunch.Name = "lblGameLaunch";
+            lblGameLaunch.Size = new Size(147, 16);
+            lblGameLaunch.TabIndex = 4;
+            lblGameLaunch.Text = "Lanzamiento: 1978";
             // 
-            // label2
+            // lblGameDeveloper
             // 
-            label2.AutoSize = true;
-            label2.ForeColor = SystemColors.ControlLightLight;
-            label2.Location = new Point(458, 553);
-            label2.Name = "label2";
-            label2.Size = new Size(48, 15);
-            label2.TabIndex = 3;
-            label2.Text = "consola";
+            lblGameDeveloper.AutoSize = true;
+            lblGameDeveloper.Font = new Font("ArcadeClassic", 11.999999F);
+            lblGameDeveloper.ForeColor = SystemColors.ControlLightLight;
+            lblGameDeveloper.Location = new Point(459, 483);
+            lblGameDeveloper.Name = "lblGameDeveloper";
+            lblGameDeveloper.Size = new Size(295, 16);
+            lblGameDeveloper.TabIndex = 3;
+            lblGameDeveloper.Text = "Desarrollador:  Toshihiro Nishikado";
             // 
-            // label1
+            // lblGameDescription
             // 
-            label1.AutoSize = true;
-            label1.ForeColor = SystemColors.ControlLightLight;
-            label1.Location = new Point(701, 111);
-            label1.Name = "label1";
-            label1.Size = new Size(296, 45);
-            label1.TabIndex = 2;
-            label1.Text = "Space Invaders: \r\nJuego de disparos donde controlas una nave que debe \r\ndestruir oleadas de invasores al";
-            // 
-            // pictureBox1
-            // 
-            pictureBox1.BackgroundImage = Properties.Resources.atariSpaceInvadersLogo;
-            pictureBox1.Location = new Point(458, 92);
-            pictureBox1.Name = "pictureBox1";
-            pictureBox1.Size = new Size(219, 309);
-            pictureBox1.TabIndex = 1;
-            pictureBox1.TabStop = false;
+            lblGameDescription.AutoSize = true;
+            lblGameDescription.Font = new Font("ArcadeClassic", 11.999999F);
+            lblGameDescription.ForeColor = SystemColors.ControlLightLight;
+            lblGameDescription.Location = new Point(693, 116);
+            lblGameDescription.MaximumSize = new Size(400, 0);
+            lblGameDescription.Name = "lblGameDescription";
+            lblGameDescription.Size = new Size(390, 128);
+            lblGameDescription.TabIndex = 2;
+            lblGameDescription.Text = resources.GetString("lblGameDescription.Text");
             // 
             // lboGameList
             // 
@@ -325,6 +454,87 @@
             lboGameList.Size = new Size(353, 472);
             lboGameList.TabIndex = 0;
             lboGameList.SelectedIndexChanged += lboGameList_SelectedIndexChanged;
+            // 
+            // pboAtariAsteroids
+            // 
+            pboAtariAsteroids.BackgroundImage = (Image)resources.GetObject("pboAtariAsteroids.BackgroundImage");
+            pboAtariAsteroids.Location = new Point(458, 92);
+            pboAtariAsteroids.Name = "pboAtariAsteroids";
+            pboAtariAsteroids.Size = new Size(219, 309);
+            pboAtariAsteroids.TabIndex = 9;
+            pboAtariAsteroids.TabStop = false;
+            // 
+            // pboAtariEt
+            // 
+            pboAtariEt.BackgroundImage = (Image)resources.GetObject("pboAtariEt.BackgroundImage");
+            pboAtariEt.Location = new Point(458, 92);
+            pboAtariEt.Name = "pboAtariEt";
+            pboAtariEt.Size = new Size(219, 309);
+            pboAtariEt.TabIndex = 10;
+            pboAtariEt.TabStop = false;
+            // 
+            // pboAtariSpaceInvaders
+            // 
+            pboAtariSpaceInvaders.BackgroundImage = Properties.Resources.atariSpaceInvadersLogo;
+            pboAtariSpaceInvaders.Location = new Point(458, 92);
+            pboAtariSpaceInvaders.Name = "pboAtariSpaceInvaders";
+            pboAtariSpaceInvaders.Size = new Size(219, 309);
+            pboAtariSpaceInvaders.TabIndex = 1;
+            pboAtariSpaceInvaders.TabStop = false;
+            // 
+            // pboPsOneMarvelVsCapcom
+            // 
+            pboPsOneMarvelVsCapcom.BackgroundImage = (Image)resources.GetObject("pboPsOneMarvelVsCapcom.BackgroundImage");
+            pboPsOneMarvelVsCapcom.Location = new Point(458, 92);
+            pboPsOneMarvelVsCapcom.Name = "pboPsOneMarvelVsCapcom";
+            pboPsOneMarvelVsCapcom.Size = new Size(219, 309);
+            pboPsOneMarvelVsCapcom.TabIndex = 20;
+            pboPsOneMarvelVsCapcom.TabStop = false;
+            // 
+            // pboSegaGenDoom32
+            // 
+            pboSegaGenDoom32.BackgroundImage = (Image)resources.GetObject("pboSegaGenDoom32.BackgroundImage");
+            pboSegaGenDoom32.Location = new Point(458, 92);
+            pboSegaGenDoom32.Name = "pboSegaGenDoom32";
+            pboSegaGenDoom32.Size = new Size(219, 309);
+            pboSegaGenDoom32.TabIndex = 21;
+            pboSegaGenDoom32.TabStop = false;
+            // 
+            // pboSegaGenMortalKombat5
+            // 
+            pboSegaGenMortalKombat5.BackgroundImage = (Image)resources.GetObject("pboSegaGenMortalKombat5.BackgroundImage");
+            pboSegaGenMortalKombat5.Location = new Point(459, 92);
+            pboSegaGenMortalKombat5.Name = "pboSegaGenMortalKombat5";
+            pboSegaGenMortalKombat5.Size = new Size(219, 309);
+            pboSegaGenMortalKombat5.TabIndex = 22;
+            pboSegaGenMortalKombat5.TabStop = false;
+            // 
+            // pboSegaGenShinobi3
+            // 
+            pboSegaGenShinobi3.BackgroundImage = (Image)resources.GetObject("pboSegaGenShinobi3.BackgroundImage");
+            pboSegaGenShinobi3.Location = new Point(458, 92);
+            pboSegaGenShinobi3.Name = "pboSegaGenShinobi3";
+            pboSegaGenShinobi3.Size = new Size(219, 309);
+            pboSegaGenShinobi3.TabIndex = 23;
+            pboSegaGenShinobi3.TabStop = false;
+            // 
+            // pboSegaGenSonicTheHedgehog
+            // 
+            pboSegaGenSonicTheHedgehog.BackgroundImage = (Image)resources.GetObject("pboSegaGenSonicTheHedgehog.BackgroundImage");
+            pboSegaGenSonicTheHedgehog.Location = new Point(459, 92);
+            pboSegaGenSonicTheHedgehog.Name = "pboSegaGenSonicTheHedgehog";
+            pboSegaGenSonicTheHedgehog.Size = new Size(219, 309);
+            pboSegaGenSonicTheHedgehog.TabIndex = 24;
+            pboSegaGenSonicTheHedgehog.TabStop = false;
+            // 
+            // pboSegaGenSuperStreetFighter2
+            // 
+            pboSegaGenSuperStreetFighter2.BackgroundImage = (Image)resources.GetObject("pboSegaGenSuperStreetFighter2.BackgroundImage");
+            pboSegaGenSuperStreetFighter2.Location = new Point(459, 92);
+            pboSegaGenSuperStreetFighter2.Name = "pboSegaGenSuperStreetFighter2";
+            pboSegaGenSuperStreetFighter2.Size = new Size(219, 309);
+            pboSegaGenSuperStreetFighter2.TabIndex = 25;
+            pboSegaGenSuperStreetFighter2.TabStop = false;
             // 
             // MainPage
             // 
@@ -345,8 +555,25 @@
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pboPsOnePepsiman).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboPsOneGranTurismo2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboPsOneCrashBandicoot).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesVsSuperMarioBros).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesTetris).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesKirbysAdventure).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesExciteBike).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboNesDKongClassic).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboAtariFrogger).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboStartGame).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboAtariAsteroids).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboAtariEt).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboAtariSpaceInvaders).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboPsOneMarvelVsCapcom).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenDoom32).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenMortalKombat5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenShinobi3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenSonicTheHedgehog).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenSuperStreetFighter2).EndInit();
             ResumeLayout(false);
         }
 
@@ -367,13 +594,30 @@
         private Button btnNesSearchDisabled;
         private Button btnAtariSearchDisabled;
         private ListBox lboGameList;
-        private Label label5;
-        private Label label4;
-        private Label label3;
-        private Label label2;
-        private Label label1;
-        private PictureBox pictureBox1;
+        private Label lblGameName;
+        private Label lblGameConsole;
+        private Label lblGameLaunch;
+        private Label lblGameDeveloper;
+        private PictureBox pboAtariSpaceInvaders;
         private PictureBox pboStartGame;
         private Label lblDebug;
+        private Label lblGameDescription;
+        private PictureBox pboAtariAsteroids;
+        private PictureBox pboAtariEt;
+        private PictureBox pboAtariFrogger;
+        private PictureBox pboNesDKongClassic;
+        private PictureBox pboNesExciteBike;
+        private PictureBox pboNesKirbysAdventure;
+        private PictureBox pboNesTetris;
+        private PictureBox pboNesVsSuperMarioBros;
+        private PictureBox pboPsOneCrashBandicoot;
+        private PictureBox pboPsOneGranTurismo2;
+        private PictureBox pboPsOnePepsiman;
+        private PictureBox pboPsOneMarvelVsCapcom;
+        private PictureBox pboSegaGenSonicTheHedgehog;
+        private PictureBox pboSegaGenShinobi3;
+        private PictureBox pboSegaGenMortalKombat5;
+        private PictureBox pboSegaGenDoom32;
+        private PictureBox pboSegaGenSuperStreetFighter2;
     }
 }

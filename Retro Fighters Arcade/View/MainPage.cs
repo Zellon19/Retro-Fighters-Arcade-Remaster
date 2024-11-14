@@ -1,6 +1,7 @@
 using Retro_Fighters_Arcade.Handler;
 using Retro_Fighters_Arcade.Model;
 using Retro_Fighters_Arcade.Properties;
+using System.Runtime.CompilerServices;
 using System.Windows.Forms.VisualStyles;
 
 namespace Retro_Fighters_Arcade
@@ -8,11 +9,15 @@ namespace Retro_Fighters_Arcade
     public partial class MainPage : Form
     {
 
-        private List<Game> _gameList = new Game().GameList();
+        private static List<Game> _gameList = new Game().GameList();
+        private static Game _selectedGame = _gameList.First();
+        private static List<PictureBox> pictureBoxesGames = new List<PictureBox>();
+
 
         public MainPage()
         {
             InitializeComponent();
+            LoadAllGamesOnList();
         }
 
         #region EmulatorToggleSearch area     
@@ -105,9 +110,24 @@ namespace Retro_Fighters_Arcade
 
         }
 
+        private void LoadAllGamesOnList()
+        {
+            if (_gameList == null) return;
+
+            foreach (Game game in _gameList)
+                this.lboGameList.Items.Add(game.Name);
+        }
+
         private void lboGameList_SelectedIndexChanged(object sender, EventArgs e)
         {
+            var selectedListGame = this.lboGameList.SelectedItem;
+            foreach (Game game in _gameList)
+                if (game.Name.Equals(selectedListGame))
+                {
+                    _selectedGame = game;
+                    this.lblDebug.Text = _selectedGame.Name;
 
+                }
         }
 
         private void pboStartGame_Click(object sender, EventArgs e)

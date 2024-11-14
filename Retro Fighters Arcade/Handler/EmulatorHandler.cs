@@ -24,11 +24,11 @@ namespace Retro_Fighters_Arcade.Handler
         private void StartEmulator(string corePath, string gamePath)
         {
             // temp
-            gamePath = gamesPsOne[0];
+            gamePath = gamesPsOne[3];
             corePath = new GameData().PsOneCorePath;
             // end temp
 
-            string arguments = $" -L \"{corePath}\" \"{gamePath}\"";
+            string arguments = $" --fullscreen -L \"{corePath}\" \"{gamePath}\"";
 
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
