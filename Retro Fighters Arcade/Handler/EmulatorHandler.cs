@@ -12,15 +12,23 @@ namespace Retro_Fighters_Arcade.Handler
     {
         private readonly string _retroArchPath = "C:\\RetroArch-Win64\\retroarch.exe";
 
-        private readonly List<string> gamesSnes = new GameData().SnesPathList;
-        public void StartEmulator(string corePath, string gamePath)
-        {
-            string arguments = $" -L \"{corePath}\" \"{gamePath}\"";
+        private static readonly List<string> gamesAtari = new GameData().AtariPathList;
+        private static readonly List<string> gamesSega = new GameData().SegaGenPathList;
+        private static readonly List<string> gamesPsOne = new GameData().PsOnePathList;
+        private static readonly List<string> gamesNes = new GameData().SnesPathList;
 
+        public string test = new GameData().PsOneCorePath;
+
+        public void StartEmulator(Game pGame) => this.StartEmulator("a", "a");
+
+        private void StartEmulator(string corePath, string gamePath)
+        {
             // temp
-            gamePath = gamesSnes[1];
-            corePath = new GameData().SegaGenesisCorePath;
+            gamePath = gamesPsOne[0];
+            corePath = new GameData().PsOneCorePath;
             // end temp
+
+            string arguments = $" -L \"{corePath}\" \"{gamePath}\"";
 
             ProcessStartInfo startInfo = new ProcessStartInfo
             {

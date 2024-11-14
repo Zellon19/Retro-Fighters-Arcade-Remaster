@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Retro_Fighters_Arcade.Controller;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -14,7 +15,7 @@ namespace Retro_Fighters_Arcade.Model
         private string _year;
         private string _console;
         private string _path;
-        private static List<Game> _gameList = new List<Game>();
+        private static List<Game> _gameList = new GameController().GetGames();
 
         public int Id
         { 

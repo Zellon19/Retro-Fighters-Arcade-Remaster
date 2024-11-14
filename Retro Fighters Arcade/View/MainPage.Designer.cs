@@ -44,11 +44,20 @@
             panel1 = new Panel();
             lblGameSearch = new Label();
             lblSelectEmulator = new Label();
-            pbxGame1 = new PictureBox();
             panel2 = new Panel();
+            lblDebug = new Label();
+            pboStartGame = new PictureBox();
+            label5 = new Label();
+            label4 = new Label();
+            label3 = new Label();
+            label2 = new Label();
+            label1 = new Label();
+            pictureBox1 = new PictureBox();
+            lboGameList = new ListBox();
             panel1.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)pbxGame1).BeginInit();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pboStartGame).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).BeginInit();
             SuspendLayout();
             // 
             // btnSearchGame
@@ -71,6 +80,7 @@
             txtSearchGame.TabIndex = 0;
             txtSearchGame.TextAlign = HorizontalAlignment.Center;
             tlpGeneral.SetToolTip(txtSearchGame, "Escribe el nombre de un juego y presiona enter/el boton\r\nde la lupa para buscar.");
+            txtSearchGame.TextChanged += txtSearchGame_TextChanged;
             // 
             // btnPsOneSearch
             // 
@@ -189,44 +199,132 @@
             // lblGameSearch
             // 
             lblGameSearch.AutoSize = true;
-            lblGameSearch.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblGameSearch.Font = new Font("ArcadeClassic", 15.7499981F);
             lblGameSearch.ForeColor = Color.Red;
             lblGameSearch.Location = new Point(473, 5);
             lblGameSearch.Name = "lblGameSearch";
-            lblGameSearch.Size = new Size(144, 25);
+            lblGameSearch.Size = new Size(145, 21);
             lblGameSearch.TabIndex = 0;
             lblGameSearch.Text = "Buscar Juego";
             // 
             // lblSelectEmulator
             // 
             lblSelectEmulator.AutoSize = true;
-            lblSelectEmulator.Font = new Font("Microsoft Sans Serif", 15.7499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lblSelectEmulator.Font = new Font("ArcadeClassic", 15.7499981F);
             lblSelectEmulator.ForeColor = Color.Red;
             lblSelectEmulator.Location = new Point(24, 5);
             lblSelectEmulator.Name = "lblSelectEmulator";
-            lblSelectEmulator.Size = new Size(222, 25);
+            lblSelectEmulator.Size = new Size(241, 21);
             lblSelectEmulator.TabIndex = 2;
             lblSelectEmulator.Text = "Seleccionar Emulador";
-            // 
-            // pbxGame1
-            // 
-            pbxGame1.Cursor = Cursors.Hand;
-            pbxGame1.Image = Properties.Resources.atariSpaceInvadersLogo;
-            pbxGame1.Location = new Point(24, 83);
-            pbxGame1.Name = "pbxGame1";
-            pbxGame1.Size = new Size(221, 304);
-            pbxGame1.TabIndex = 0;
-            pbxGame1.TabStop = false;
-            pbxGame1.Click += pictureBox1_Click;
             // 
             // panel2
             // 
             panel2.BackColor = Color.Transparent;
-            panel2.Controls.Add(pbxGame1);
+            panel2.Controls.Add(lblDebug);
+            panel2.Controls.Add(pboStartGame);
+            panel2.Controls.Add(label5);
+            panel2.Controls.Add(label4);
+            panel2.Controls.Add(label3);
+            panel2.Controls.Add(label2);
+            panel2.Controls.Add(label1);
+            panel2.Controls.Add(pictureBox1);
+            panel2.Controls.Add(lboGameList);
             panel2.Location = new Point(12, 107);
             panel2.Name = "panel2";
             panel2.Size = new Size(1326, 610);
             panel2.TabIndex = 2;
+            // 
+            // lblDebug
+            // 
+            lblDebug.AutoSize = true;
+            lblDebug.ForeColor = SystemColors.ControlLightLight;
+            lblDebug.Location = new Point(643, 466);
+            lblDebug.Name = "lblDebug";
+            lblDebug.Size = new Size(0, 15);
+            lblDebug.TabIndex = 8;
+            // 
+            // pboStartGame
+            // 
+            pboStartGame.BackgroundImage = (Image)resources.GetObject("pboStartGame.BackgroundImage");
+            pboStartGame.Location = new Point(723, 277);
+            pboStartGame.Name = "pboStartGame";
+            pboStartGame.Size = new Size(200, 91);
+            pboStartGame.TabIndex = 7;
+            pboStartGame.TabStop = false;
+            pboStartGame.Click += pboStartGame_Click;
+            // 
+            // label5
+            // 
+            label5.AutoSize = true;
+            label5.ForeColor = SystemColors.ControlLightLight;
+            label5.Location = new Point(458, 404);
+            label5.Name = "label5";
+            label5.Size = new Size(37, 15);
+            label5.TabIndex = 6;
+            label5.Text = "name";
+            // 
+            // label4
+            // 
+            label4.AutoSize = true;
+            label4.ForeColor = SystemColors.ControlLightLight;
+            label4.Location = new Point(458, 455);
+            label4.Name = "label4";
+            label4.Size = new Size(48, 15);
+            label4.TabIndex = 5;
+            label4.Text = "consola";
+            // 
+            // label3
+            // 
+            label3.AutoSize = true;
+            label3.ForeColor = SystemColors.ControlLightLight;
+            label3.Location = new Point(458, 507);
+            label3.Name = "label3";
+            label3.Size = new Size(95, 15);
+            label3.TabIndex = 4;
+            label3.Text = "ano lanzamiento";
+            // 
+            // label2
+            // 
+            label2.AutoSize = true;
+            label2.ForeColor = SystemColors.ControlLightLight;
+            label2.Location = new Point(458, 553);
+            label2.Name = "label2";
+            label2.Size = new Size(48, 15);
+            label2.TabIndex = 3;
+            label2.Text = "consola";
+            // 
+            // label1
+            // 
+            label1.AutoSize = true;
+            label1.ForeColor = SystemColors.ControlLightLight;
+            label1.Location = new Point(701, 111);
+            label1.Name = "label1";
+            label1.Size = new Size(296, 45);
+            label1.TabIndex = 2;
+            label1.Text = "Space Invaders: \r\nJuego de disparos donde controlas una nave que debe \r\ndestruir oleadas de invasores al";
+            // 
+            // pictureBox1
+            // 
+            pictureBox1.BackgroundImage = Properties.Resources.atariSpaceInvadersLogo;
+            pictureBox1.Location = new Point(458, 92);
+            pictureBox1.Name = "pictureBox1";
+            pictureBox1.Size = new Size(219, 309);
+            pictureBox1.TabIndex = 1;
+            pictureBox1.TabStop = false;
+            // 
+            // lboGameList
+            // 
+            lboGameList.BackColor = SystemColors.MenuText;
+            lboGameList.Font = new Font("ArcadeClassic", 14.2499981F, FontStyle.Regular, GraphicsUnit.Point, 0);
+            lboGameList.ForeColor = SystemColors.Window;
+            lboGameList.FormattingEnabled = true;
+            lboGameList.ItemHeight = 18;
+            lboGameList.Location = new Point(24, 92);
+            lboGameList.Name = "lboGameList";
+            lboGameList.Size = new Size(353, 472);
+            lboGameList.TabIndex = 0;
+            lboGameList.SelectedIndexChanged += lboGameList_SelectedIndexChanged;
             // 
             // MainPage
             // 
@@ -245,8 +343,10 @@
             Text = "Retro Fighters Arcade";
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)pbxGame1).EndInit();
             panel2.ResumeLayout(false);
+            panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pboStartGame).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pictureBox1).EndInit();
             ResumeLayout(false);
         }
 
@@ -261,11 +361,19 @@
         private Label lblSelectEmulator;
         private Button btnSearchGame;
         private Button btnPsOneSearch;
-        private PictureBox pbxGame1;
         private Panel panel2;
         private Button btnPsOneSearchDisabled;
         private Button btnSegaSearchDisabled;
         private Button btnNesSearchDisabled;
         private Button btnAtariSearchDisabled;
+        private ListBox lboGameList;
+        private Label label5;
+        private Label label4;
+        private Label label3;
+        private Label label2;
+        private Label label1;
+        private PictureBox pictureBox1;
+        private PictureBox pboStartGame;
+        private Label lblDebug;
     }
 }

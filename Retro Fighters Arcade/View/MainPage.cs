@@ -1,3 +1,5 @@
+using Retro_Fighters_Arcade.Handler;
+using Retro_Fighters_Arcade.Model;
 using Retro_Fighters_Arcade.Properties;
 using System.Windows.Forms.VisualStyles;
 
@@ -5,14 +7,12 @@ namespace Retro_Fighters_Arcade
 {
     public partial class MainPage : Form
     {
+
+        private List<Game> _gameList = new Game().GameList();
+
         public MainPage()
         {
             InitializeComponent();
-        }
-
-        private void pictureBox1_Click(object sender, EventArgs e)
-        {
-            MessageBox.Show("Esto te va a abrir el juego xd");
         }
 
         #region EmulatorToggleSearch area     
@@ -68,7 +68,7 @@ namespace Retro_Fighters_Arcade
             this.btnNesSearchDisabled.BringToFront();
             toggledSearchButtons[2] = !toggledSearchButtons[2];
         }
-        
+
         private void btnNesSearchDisabled_Click(object sender, EventArgs e)
         {
             this.btnNesSearch.Enabled = true;
@@ -88,11 +88,11 @@ namespace Retro_Fighters_Arcade
             this.btnAtariSearchDisabled.SendToBack();
             toggledSearchButtons[3] = !toggledSearchButtons[3];
         }
-        
+
         private void btnAtariSearchDisabled_Click(object sender, EventArgs e)
         {
             this.btnAtariSearch.Enabled = true;
-            this.btnAtariSearchDisabled.Enabled=false;
+            this.btnAtariSearchDisabled.Enabled = false;
             this.btnAtariSearchDisabled.Focus();
             this.btnAtariSearch.BringToFront();
             this.btnAtariSearchDisabled.SendToBack();
@@ -100,5 +100,21 @@ namespace Retro_Fighters_Arcade
         }
         #endregion
 
+        private void txtSearchGame_TextChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void lboGameList_SelectedIndexChanged(object sender, EventArgs e)
+        {
+
+        }
+
+        private void pboStartGame_Click(object sender, EventArgs e)
+        {
+            EmulatorHandler emuHan = new EmulatorHandler();
+            emuHan.StartEmulator(new Game());
+            this.lblDebug.Text = emuHan.test;
+        }
     }
 }

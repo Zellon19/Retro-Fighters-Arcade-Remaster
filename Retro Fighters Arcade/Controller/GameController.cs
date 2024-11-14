@@ -19,6 +19,11 @@ namespace Retro_Fighters_Arcade.Controller
           * 
           */
 
+        public List<Game> GetGames()
+        {
+            return null;
+        }
+
 
         public bool AddGame(Game pGame)
         {
