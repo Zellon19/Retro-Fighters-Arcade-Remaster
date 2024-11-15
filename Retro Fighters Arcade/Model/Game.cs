@@ -48,15 +48,6 @@ namespace Retro_Fighters_Arcade.Model
         }
         public List<Game> GameList() => _gameList;
 
-        // searches locally, for in-class-use
-        private Game? SearchGame()
-        {
-            foreach (Game? game in _gameList)
-                if (game.Id.Equals(this.Id)) return game;
-
-            return null;
-        }
-
         // search using an object
         public Game? SearchGame(Game pGame)
         {

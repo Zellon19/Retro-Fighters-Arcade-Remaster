@@ -306,7 +306,10 @@ namespace Retro_Fighters_Arcade
         private void LoadAllGamesOnList()
         {
             this.lboGameList.Items.Clear();
+
             if (_gameList == null) return;
+
+            // if all in the array false we make them true and show the activated buttons
             if (toggledSearchButtons.All(b => b == false))
             {
                 toggledSearchButtons = [true, true, true, true];
@@ -326,6 +329,7 @@ namespace Retro_Fighters_Arcade
                 this.LoadAllGamesOnList();
                 return;
             }
+            
             // this order -> ps1 - sega - nes - atari
             foreach (Game game in _gameList)
             {
@@ -355,12 +359,12 @@ namespace Retro_Fighters_Arcade
         private void lboGameList_SelectedIndexChanged(object sender, EventArgs e)
         {
             var selectedListGame = this.lboGameList.SelectedIndex;
+            string text = this.lboGameList.Text;
             for (int i = 0; i < _gameList.Count; i++)
             {
-                if (i == selectedListGame)
+                if (text.Equals(_gameList[i].Name))
                 {
                     _selectedGame = new Game().SearchGame(_gameList[i]);
-
                     this.ManageShownGame(this.lboGameList.SelectedItem.ToString(), _selectedGame);
                     break;
                 }
@@ -397,14 +401,6 @@ namespace Retro_Fighters_Arcade
             // Sega Genesis
             if (toggledSearchButtons[1])
             {
-                if (pGame.ToLower().Contains("doom 32x"))
-                {
-                    this.pboSegaGenDoom32.Visible = true;
-                }
-                if (pGame.ToLower().Contains("mortal kombat"))
-                {
-                    this.pboSegaGenMortalKombat5.Visible = true;
-                }
                 if (pGame.ToLower().Contains("shinobi iii"))
                 {
                     this.pboSegaGenShinobi3.Visible = true;

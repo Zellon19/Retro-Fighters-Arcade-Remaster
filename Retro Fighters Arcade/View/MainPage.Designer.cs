@@ -215,6 +215,7 @@
             // pboStartGame
             // 
             pboStartGame.BackgroundImage = (Image)resources.GetObject("pboStartGame.BackgroundImage");
+            pboStartGame.Cursor = Cursors.Hand;
             pboStartGame.Location = new Point(878, 353);
             pboStartGame.Name = "pboStartGame";
             pboStartGame.Size = new Size(200, 91);

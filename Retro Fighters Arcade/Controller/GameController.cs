@@ -18,7 +18,7 @@ namespace Retro_Fighters_Arcade.Controller
           * sql shenanigans
           * in here
           * and magic shit
-          * bc i do NOT have the database lol
+          * bc i do NOT have the database lol <= now i do have the db >D
           * 
           */
 
