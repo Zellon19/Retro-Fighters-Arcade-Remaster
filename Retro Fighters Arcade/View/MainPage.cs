@@ -21,7 +21,7 @@ namespace Retro_Fighters_Arcade
             this.ManageShownGame(_gameList[0].Name, _gameList[0]);
         }
 
-        #region EmulatorToggleSearch area     
+        #region Filter Toggles Area     
         private static bool[] toggledSearchButtons = [true, true, true, true];
 
         // this order -> ps1 - sega - nes - atari
@@ -146,161 +146,10 @@ namespace Retro_Fighters_Arcade
         }
         #endregion
 
-        #region do not open
         private void txtSearchGame_TextChanged(object sender, EventArgs e)
         {
 
         }
-        /*          switch (gameId)
-                {
-                    case 0:
-                        this.pboPsOneGranTurismo2.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 1:
-                        this.pboPsOnePepsiman.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 2:
-                        this.pboPsOneCrashBandicoot.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 3:
-                        this.pboPsOneMarvelVsCapcom.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 4:
-                        this.pboAtariAsteroids.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 5:
-                        this.pboAtariEt.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 6:
-                        this.pboAtariFrogger.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 7:
-                        this.pboAtariSpaceInvaders.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 8:
-                        this.pboNesDKongClassic.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 9:
-                        this.pboNesExciteBike.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 10:
-                        this.pboNesKirbysAdventure.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 11:
-                        this.pboNesTetris.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 12:
-                        this.pboNesVsSuperMarioBros.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 13:
-                        this.pboSegaGenDoom32.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 14:
-                        this.pboSegaGenMortalKombat5.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 15:
-                        this.pboSegaGenShinobi3.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 16:
-                        this.pboSegaGenSuperStreetFighter2.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    case 17:
-                        this.pboSegaGenSonicTheHedgehog.BringToFront();
-                        this.lblGameName.Text = $"Nombre: {_gameList[gameId].Name}";
-                        this.lblGameConsole.Text = $"Consola: {_gameList[gameId].Console}";
-                        this.lblGameLaunch.Text = $"Lanzamiento: {_gameList[gameId].Year}";
-                        this.lblGameDeveloper.Text = $"Desarrollador: {_gameList[gameId].Developer}";
-                        this.lblGameDescription.Text = _gameList[gameId].Description;
-                        break;
-                    default:
-                        break;
-                } */
-        #endregion
 
         // this order -> ps1 - sega - nes - atari
         private void LoadAllGamesOnList()
@@ -371,13 +220,14 @@ namespace Retro_Fighters_Arcade
             }
         }
 
+        // handles showing the game cover and data based on the selected game
         private void ManageShownGame(string pGame, Game pGameObj)
         {
             this.HideAllImages();
 
             // this order -> ps1 - sega - nes - atari
 
-            // PS1
+            // PS1 if selected game is ps1 then selects the appropiate cover based on its name
             if (toggledSearchButtons[0])
             {
                 if (pGame.ToLower().Contains("gran turismo 2"))
@@ -398,7 +248,7 @@ namespace Retro_Fighters_Arcade
                 }
             }
 
-            // Sega Genesis
+            // Sega Genesis if selected game is sega gen then selects the appropiate cover based on its name
             if (toggledSearchButtons[1])
             {
                 if (pGame.ToLower().Contains("shinobi iii"))
@@ -415,7 +265,7 @@ namespace Retro_Fighters_Arcade
                 }
             }
 
-            // NES
+            // NES if selected game is nes then selects the appropiate cover based on its name
             if (toggledSearchButtons[2])
             {
                 if (pGame.ToLower().Contains("donkey kong classic"))
@@ -440,7 +290,7 @@ namespace Retro_Fighters_Arcade
                 }
             }
 
-            // Atari
+            // Atari if selected game is atari then selects the appropiate cover based on its name
             if (toggledSearchButtons[3])
             {
                 if (pGame.ToLower().Contains("asteroids"))
@@ -461,14 +311,12 @@ namespace Retro_Fighters_Arcade
                 }
             }
 
-
             // Set labels for all cases
             this.lblGameName.Text = $"Nombre: {pGameObj.Name}";
             this.lblGameConsole.Text = $"Consola: {pGameObj.Console}";
             this.lblGameLaunch.Text = $"Lanzamiento: {pGameObj.Year}";
             this.lblGameDeveloper.Text = $"Desarrollador: {pGameObj.Developer}";
             this.lblGameDescription.Text = pGameObj.Description;
-
         }
 
         private void HideAllImages()
@@ -493,12 +341,15 @@ namespace Retro_Fighters_Arcade
             this.pboSegaGenSonicTheHedgehog.Visible = false;
         }
 
+        // just runs the game lol
         private void pboStartGame_Click(object sender, EventArgs e)
         {
             EmulatorHandler emuHan = new EmulatorHandler();
             emuHan.StartEmulator(_selectedGame);
+            this.txtSearchGame.Clear();
         }
 
+        // looks up a game's name to display based on the text input
         private void btnSearchGame_Click(object sender, EventArgs e)
         {
             this.lboGameList.Items.Clear();
@@ -513,9 +364,11 @@ namespace Retro_Fighters_Arcade
             }
         }
 
+        // clears the search game txt and resets the game list, adding all
         private void btnRefresh_Click(object sender, EventArgs e)
         {
             this.lboGameList.Items.Clear();
+            this.txtSearchGame.Clear();
             this.LoadAllGamesOnList();
         }
     }

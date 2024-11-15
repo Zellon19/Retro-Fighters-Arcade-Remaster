@@ -8,6 +8,13 @@ namespace Retro_Fighters_Arcade.Model
 {
     internal class GameData
     {
+
+        /*
+         *  The whole class just has all of the current game names,
+         *  ROM paths and the current cores' path
+         * 
+         */
+
         private readonly string[] _atariGames = 
             ["Asteroids",
              "ET",

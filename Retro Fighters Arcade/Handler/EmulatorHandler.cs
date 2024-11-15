@@ -10,6 +10,8 @@ namespace Retro_Fighters_Arcade.Handler
 {
     internal class EmulatorHandler
     {
+        // just has the paths to retroarch, every game and core
+        #region Paths
         private readonly string _retroArchPath = "C:\\Users\\axela\\Desktop\\RetroArch-Win64\\retroarch.exe";
 
         private static readonly List<string> gamesAtari = new GameData().AtariPathList;
@@ -21,6 +23,7 @@ namespace Retro_Fighters_Arcade.Handler
         private static readonly string pathCoreSega = new GameData().SegaGenesisCorePath;
         private static readonly string pathCorePsOne = new GameData().PsOneCorePath;
         private static readonly string pathCoreNes = new GameData().NesCorePath;
+        #endregion
 
         private static readonly List<Game> _gameList = new Game().GameList();
 
@@ -31,7 +34,8 @@ namespace Retro_Fighters_Arcade.Handler
                 string ex = pGame.Console.ToLower();
                 string gameName = pGame.Name.ToLower();
 
-                 // crash - gt2 - pepsiman - mvc
+                // if game is from ps1 starts the corresponding game
+                // crash - gt2 - pepsiman - mvc
                 if (ex.Contains("playstation"))
                 {
                     if (gameName.Contains("crash bandicoot"))
@@ -56,6 +60,8 @@ namespace Retro_Fighters_Arcade.Handler
                     }
                     continue;
                 }
+                
+                // if game is from atari starts the corresponding game
                 // asteroids - et - frogger - space invaders
                 if (ex.Contains("atari"))
                 {
@@ -81,6 +87,8 @@ namespace Retro_Fighters_Arcade.Handler
                     }
                     continue;
                 }
+
+                // if game is from sega gen starts the corresponding game
                 // shinobi iii, sonic the hedgehog, super street fighter ii
                 if (ex.Contains("sega"))
                 {
@@ -101,6 +109,8 @@ namespace Retro_Fighters_Arcade.Handler
                     }
                     continue;
                 }
+
+                // if game is from nes starts the corresponding game
                 // dkong - excitebike - kirby - tetris - super mario bros
                 if (ex.Contains("nes") && !ex.Contains("sega"))
                 {
@@ -137,7 +147,6 @@ namespace Retro_Fighters_Arcade.Handler
         private void StartEmulator(string corePath, string gamePath)
         {
             string arguments = $" --fullscreen -L \"{corePath}\" \"{gamePath}\"";
-
             ProcessStartInfo startInfo = new ProcessStartInfo
             {
                 FileName = _retroArchPath,
