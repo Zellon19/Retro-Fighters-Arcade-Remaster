@@ -41,10 +41,17 @@
             btnSegaSearchDisabled = new Button();
             btnNesSearchDisabled = new Button();
             btnAtariSearchDisabled = new Button();
+            pboStartGame = new PictureBox();
             panel1 = new Panel();
             lblGameSearch = new Label();
             lblSelectEmulator = new Label();
             panel2 = new Panel();
+            pboSegaGenSuperStreetFighter2 = new PictureBox();
+            pboSegaGenSonicTheHedgehog = new PictureBox();
+            pboSegaGenShinobi3 = new PictureBox();
+            pboSegaGenMortalKombat5 = new PictureBox();
+            pboSegaGenDoom32 = new PictureBox();
+            pboPsOneMarvelVsCapcom = new PictureBox();
             pboPsOnePepsiman = new PictureBox();
             pboPsOneGranTurismo2 = new PictureBox();
             pboPsOneCrashBandicoot = new PictureBox();
@@ -55,7 +62,6 @@
             pboNesDKongClassic = new PictureBox();
             pboAtariFrogger = new PictureBox();
             lblDebug = new Label();
-            pboStartGame = new PictureBox();
             lblGameName = new Label();
             lblGameConsole = new Label();
             lblGameLaunch = new Label();
@@ -65,14 +71,15 @@
             pboAtariAsteroids = new PictureBox();
             pboAtariEt = new PictureBox();
             pboAtariSpaceInvaders = new PictureBox();
-            pboPsOneMarvelVsCapcom = new PictureBox();
-            pboSegaGenDoom32 = new PictureBox();
-            pboSegaGenMortalKombat5 = new PictureBox();
-            pboSegaGenShinobi3 = new PictureBox();
-            pboSegaGenSonicTheHedgehog = new PictureBox();
-            pboSegaGenSuperStreetFighter2 = new PictureBox();
+            ((System.ComponentModel.ISupportInitialize)pboStartGame).BeginInit();
             panel1.SuspendLayout();
             panel2.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenSuperStreetFighter2).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenSonicTheHedgehog).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenShinobi3).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenMortalKombat5).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenDoom32).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)pboPsOneMarvelVsCapcom).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboPsOnePepsiman).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboPsOneGranTurismo2).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboPsOneCrashBandicoot).BeginInit();
@@ -82,16 +89,9 @@
             ((System.ComponentModel.ISupportInitialize)pboNesExciteBike).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboNesDKongClassic).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboAtariFrogger).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboStartGame).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboAtariAsteroids).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboAtariEt).BeginInit();
             ((System.ComponentModel.ISupportInitialize)pboAtariSpaceInvaders).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboPsOneMarvelVsCapcom).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenDoom32).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenMortalKombat5).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenShinobi3).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenSonicTheHedgehog).BeginInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenSuperStreetFighter2).BeginInit();
             SuspendLayout();
             // 
             // btnSearchGame
@@ -210,6 +210,17 @@
             btnAtariSearchDisabled.UseVisualStyleBackColor = true;
             btnAtariSearchDisabled.Click += btnAtariSearchDisabled_Click;
             // 
+            // pboStartGame
+            // 
+            pboStartGame.BackgroundImage = (Image)resources.GetObject("pboStartGame.BackgroundImage");
+            pboStartGame.Location = new Point(878, 353);
+            pboStartGame.Name = "pboStartGame";
+            pboStartGame.Size = new Size(200, 91);
+            pboStartGame.TabIndex = 7;
+            pboStartGame.TabStop = false;
+            tlpGeneral.SetToolTip(pboStartGame, "Click aqui para iniciar el juego seleccionado.");
+            pboStartGame.Click += pboStartGame_Click;
+            // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
@@ -233,24 +244,26 @@
             // lblGameSearch
             // 
             lblGameSearch.AutoSize = true;
+            lblGameSearch.BackColor = Color.WhiteSmoke;
             lblGameSearch.Font = new Font("ArcadeClassic", 15.7499981F);
             lblGameSearch.ForeColor = Color.Red;
             lblGameSearch.Location = new Point(473, 5);
             lblGameSearch.Name = "lblGameSearch";
-            lblGameSearch.Size = new Size(145, 21);
+            lblGameSearch.Size = new Size(305, 21);
             lblGameSearch.TabIndex = 0;
-            lblGameSearch.Text = "Buscar Juego";
+            lblGameSearch.Text = "Buscar Juego (No disponible)";
             // 
             // lblSelectEmulator
             // 
             lblSelectEmulator.AutoSize = true;
+            lblSelectEmulator.BackColor = Color.WhiteSmoke;
             lblSelectEmulator.Font = new Font("ArcadeClassic", 15.7499981F);
             lblSelectEmulator.ForeColor = Color.Red;
             lblSelectEmulator.Location = new Point(24, 5);
             lblSelectEmulator.Name = "lblSelectEmulator";
-            lblSelectEmulator.Size = new Size(241, 21);
+            lblSelectEmulator.Size = new Size(401, 21);
             lblSelectEmulator.TabIndex = 2;
-            lblSelectEmulator.Text = "Seleccionar Emulador";
+            lblSelectEmulator.Text = "Seleccionar Emulador (No disponible)";
             // 
             // panel2
             // 
@@ -285,6 +298,60 @@
             panel2.Name = "panel2";
             panel2.Size = new Size(1326, 610);
             panel2.TabIndex = 2;
+            // 
+            // pboSegaGenSuperStreetFighter2
+            // 
+            pboSegaGenSuperStreetFighter2.BackgroundImage = (Image)resources.GetObject("pboSegaGenSuperStreetFighter2.BackgroundImage");
+            pboSegaGenSuperStreetFighter2.Location = new Point(459, 92);
+            pboSegaGenSuperStreetFighter2.Name = "pboSegaGenSuperStreetFighter2";
+            pboSegaGenSuperStreetFighter2.Size = new Size(219, 309);
+            pboSegaGenSuperStreetFighter2.TabIndex = 25;
+            pboSegaGenSuperStreetFighter2.TabStop = false;
+            // 
+            // pboSegaGenSonicTheHedgehog
+            // 
+            pboSegaGenSonicTheHedgehog.BackgroundImage = (Image)resources.GetObject("pboSegaGenSonicTheHedgehog.BackgroundImage");
+            pboSegaGenSonicTheHedgehog.Location = new Point(459, 92);
+            pboSegaGenSonicTheHedgehog.Name = "pboSegaGenSonicTheHedgehog";
+            pboSegaGenSonicTheHedgehog.Size = new Size(219, 309);
+            pboSegaGenSonicTheHedgehog.TabIndex = 24;
+            pboSegaGenSonicTheHedgehog.TabStop = false;
+            // 
+            // pboSegaGenShinobi3
+            // 
+            pboSegaGenShinobi3.BackgroundImage = (Image)resources.GetObject("pboSegaGenShinobi3.BackgroundImage");
+            pboSegaGenShinobi3.Location = new Point(458, 92);
+            pboSegaGenShinobi3.Name = "pboSegaGenShinobi3";
+            pboSegaGenShinobi3.Size = new Size(219, 309);
+            pboSegaGenShinobi3.TabIndex = 23;
+            pboSegaGenShinobi3.TabStop = false;
+            // 
+            // pboSegaGenMortalKombat5
+            // 
+            pboSegaGenMortalKombat5.BackgroundImage = (Image)resources.GetObject("pboSegaGenMortalKombat5.BackgroundImage");
+            pboSegaGenMortalKombat5.Location = new Point(459, 92);
+            pboSegaGenMortalKombat5.Name = "pboSegaGenMortalKombat5";
+            pboSegaGenMortalKombat5.Size = new Size(219, 309);
+            pboSegaGenMortalKombat5.TabIndex = 22;
+            pboSegaGenMortalKombat5.TabStop = false;
+            // 
+            // pboSegaGenDoom32
+            // 
+            pboSegaGenDoom32.BackgroundImage = (Image)resources.GetObject("pboSegaGenDoom32.BackgroundImage");
+            pboSegaGenDoom32.Location = new Point(458, 92);
+            pboSegaGenDoom32.Name = "pboSegaGenDoom32";
+            pboSegaGenDoom32.Size = new Size(219, 309);
+            pboSegaGenDoom32.TabIndex = 21;
+            pboSegaGenDoom32.TabStop = false;
+            // 
+            // pboPsOneMarvelVsCapcom
+            // 
+            pboPsOneMarvelVsCapcom.BackgroundImage = (Image)resources.GetObject("pboPsOneMarvelVsCapcom.BackgroundImage");
+            pboPsOneMarvelVsCapcom.Location = new Point(458, 92);
+            pboPsOneMarvelVsCapcom.Name = "pboPsOneMarvelVsCapcom";
+            pboPsOneMarvelVsCapcom.Size = new Size(219, 309);
+            pboPsOneMarvelVsCapcom.TabIndex = 20;
+            pboPsOneMarvelVsCapcom.TabStop = false;
             // 
             // pboPsOnePepsiman
             // 
@@ -375,16 +442,6 @@
             lblDebug.Name = "lblDebug";
             lblDebug.Size = new Size(0, 15);
             lblDebug.TabIndex = 8;
-            // 
-            // pboStartGame
-            // 
-            pboStartGame.BackgroundImage = (Image)resources.GetObject("pboStartGame.BackgroundImage");
-            pboStartGame.Location = new Point(878, 353);
-            pboStartGame.Name = "pboStartGame";
-            pboStartGame.Size = new Size(200, 91);
-            pboStartGame.TabIndex = 7;
-            pboStartGame.TabStop = false;
-            pboStartGame.Click += pboStartGame_Click;
             // 
             // lblGameName
             // 
@@ -482,60 +539,6 @@
             pboAtariSpaceInvaders.TabIndex = 1;
             pboAtariSpaceInvaders.TabStop = false;
             // 
-            // pboPsOneMarvelVsCapcom
-            // 
-            pboPsOneMarvelVsCapcom.BackgroundImage = (Image)resources.GetObject("pboPsOneMarvelVsCapcom.BackgroundImage");
-            pboPsOneMarvelVsCapcom.Location = new Point(458, 92);
-            pboPsOneMarvelVsCapcom.Name = "pboPsOneMarvelVsCapcom";
-            pboPsOneMarvelVsCapcom.Size = new Size(219, 309);
-            pboPsOneMarvelVsCapcom.TabIndex = 20;
-            pboPsOneMarvelVsCapcom.TabStop = false;
-            // 
-            // pboSegaGenDoom32
-            // 
-            pboSegaGenDoom32.BackgroundImage = (Image)resources.GetObject("pboSegaGenDoom32.BackgroundImage");
-            pboSegaGenDoom32.Location = new Point(458, 92);
-            pboSegaGenDoom32.Name = "pboSegaGenDoom32";
-            pboSegaGenDoom32.Size = new Size(219, 309);
-            pboSegaGenDoom32.TabIndex = 21;
-            pboSegaGenDoom32.TabStop = false;
-            // 
-            // pboSegaGenMortalKombat5
-            // 
-            pboSegaGenMortalKombat5.BackgroundImage = (Image)resources.GetObject("pboSegaGenMortalKombat5.BackgroundImage");
-            pboSegaGenMortalKombat5.Location = new Point(459, 92);
-            pboSegaGenMortalKombat5.Name = "pboSegaGenMortalKombat5";
-            pboSegaGenMortalKombat5.Size = new Size(219, 309);
-            pboSegaGenMortalKombat5.TabIndex = 22;
-            pboSegaGenMortalKombat5.TabStop = false;
-            // 
-            // pboSegaGenShinobi3
-            // 
-            pboSegaGenShinobi3.BackgroundImage = (Image)resources.GetObject("pboSegaGenShinobi3.BackgroundImage");
-            pboSegaGenShinobi3.Location = new Point(458, 92);
-            pboSegaGenShinobi3.Name = "pboSegaGenShinobi3";
-            pboSegaGenShinobi3.Size = new Size(219, 309);
-            pboSegaGenShinobi3.TabIndex = 23;
-            pboSegaGenShinobi3.TabStop = false;
-            // 
-            // pboSegaGenSonicTheHedgehog
-            // 
-            pboSegaGenSonicTheHedgehog.BackgroundImage = (Image)resources.GetObject("pboSegaGenSonicTheHedgehog.BackgroundImage");
-            pboSegaGenSonicTheHedgehog.Location = new Point(459, 92);
-            pboSegaGenSonicTheHedgehog.Name = "pboSegaGenSonicTheHedgehog";
-            pboSegaGenSonicTheHedgehog.Size = new Size(219, 309);
-            pboSegaGenSonicTheHedgehog.TabIndex = 24;
-            pboSegaGenSonicTheHedgehog.TabStop = false;
-            // 
-            // pboSegaGenSuperStreetFighter2
-            // 
-            pboSegaGenSuperStreetFighter2.BackgroundImage = (Image)resources.GetObject("pboSegaGenSuperStreetFighter2.BackgroundImage");
-            pboSegaGenSuperStreetFighter2.Location = new Point(459, 92);
-            pboSegaGenSuperStreetFighter2.Name = "pboSegaGenSuperStreetFighter2";
-            pboSegaGenSuperStreetFighter2.Size = new Size(219, 309);
-            pboSegaGenSuperStreetFighter2.TabIndex = 25;
-            pboSegaGenSuperStreetFighter2.TabStop = false;
-            // 
             // MainPage
             // 
             AutoScaleDimensions = new SizeF(7F, 15F);
@@ -551,10 +554,17 @@
             MinimumSize = new Size(1278, 726);
             Name = "MainPage";
             Text = "Retro Fighters Arcade";
+            ((System.ComponentModel.ISupportInitialize)pboStartGame).EndInit();
             panel1.ResumeLayout(false);
             panel1.PerformLayout();
             panel2.ResumeLayout(false);
             panel2.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenSuperStreetFighter2).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenSonicTheHedgehog).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenShinobi3).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenMortalKombat5).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboSegaGenDoom32).EndInit();
+            ((System.ComponentModel.ISupportInitialize)pboPsOneMarvelVsCapcom).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboPsOnePepsiman).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboPsOneGranTurismo2).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboPsOneCrashBandicoot).EndInit();
@@ -564,16 +574,9 @@
             ((System.ComponentModel.ISupportInitialize)pboNesExciteBike).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboNesDKongClassic).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboAtariFrogger).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboStartGame).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboAtariAsteroids).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboAtariEt).EndInit();
             ((System.ComponentModel.ISupportInitialize)pboAtariSpaceInvaders).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboPsOneMarvelVsCapcom).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenDoom32).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenMortalKombat5).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenShinobi3).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenSonicTheHedgehog).EndInit();
-            ((System.ComponentModel.ISupportInitialize)pboSegaGenSuperStreetFighter2).EndInit();
             ResumeLayout(false);
         }
 

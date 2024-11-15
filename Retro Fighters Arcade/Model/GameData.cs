@@ -4,15 +4,14 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms.VisualStyles;
-
 namespace Retro_Fighters_Arcade.Model
 {
     internal class GameData
     {
         private readonly string[] _atariGames = 
             ["Asteroids",
-             "ET", "Frogger", 
-             "River Raid", 
+             "ET",
+             "Frogger", 
              "Space Invaders"];
         private readonly List<string> _atariPathList = 
             ["E:\\ROMs\\atari\\asteroids.a26",
