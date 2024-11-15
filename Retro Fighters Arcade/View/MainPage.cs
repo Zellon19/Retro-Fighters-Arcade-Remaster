@@ -30,7 +30,7 @@ namespace Retro_Fighters_Arcade
             this.btnPsOneSearch.Visible = false;
             this.btnPsOneSearchDisabled.Visible = true;
             this.btnPsOneSearchDisabled.Focus();
-;
+            ;
             toggledSearchButtons[0] = !toggledSearchButtons[0];
             this.lboGameList.Items.Clear();
             foreach (Game game in _tempGameList)
@@ -45,7 +45,7 @@ namespace Retro_Fighters_Arcade
             this.btnPsOneSearchDisabled.Visible = false;
             this.btnPsOneSearch.Visible = true;
             this.btnPsOneSearch.Focus();
- 
+
             toggledSearchButtons[0] = !toggledSearchButtons[0];
             this.lboGameList.Items.Clear();
             foreach (Game game in _tempGameList)
@@ -309,10 +309,21 @@ namespace Retro_Fighters_Arcade
             if (_gameList == null) return;
             if (toggledSearchButtons.All(b => b == false))
             {
-                foreach (Game game in _gameList)
-                    this.lboGameList.Items.Add(game.Name);
+                toggledSearchButtons = [true, true, true, true];
 
-                this.MakeActivatedButtonsVisible();
+                this.btnAtariSearchDisabled.Visible = false;
+                this.btnAtariSearch.Visible = true;
+
+                this.btnPsOneSearchDisabled.Visible = false;
+                this.btnPsOneSearch.Visible = true;
+
+                this.btnSegaSearchDisabled.Visible = false;
+                this.btnSegaSearch.Visible = true;
+
+                this.btnNesSearchDisabled.Visible = false;
+                this.btnNesSearch.Visible = true;
+
+                this.LoadAllGamesOnList();
                 return;
             }
             // this order -> ps1 - sega - nes - atari
@@ -339,21 +350,6 @@ namespace Retro_Fighters_Arcade
                     continue;
                 }
             }
-        }
-
-        private void MakeActivatedButtonsVisible()
-        {
-            this.btnAtariSearch.Visible = true;
-            this.btnAtariSearchDisabled.Visible = false;
-
-            this.btnPsOneSearch.Visible = true;
-            this.btnPsOneSearchDisabled.Visible = false;
-
-            this.btnSegaSearch.Visible = true;
-            this.btnSegaSearchDisabled.Visible = false;
-
-            this.btnNesSearch.Visible = true;
-            this.btnNesSearchDisabled.Visible = false;
         }
 
         private void lboGameList_SelectedIndexChanged(object sender, EventArgs e)
@@ -504,8 +500,27 @@ namespace Retro_Fighters_Arcade
         private void pboStartGame_Click(object sender, EventArgs e)
         {
             EmulatorHandler emuHan = new EmulatorHandler();
-            emuHan.StartEmulator(new Game());
-            this.lblDebug.Text = emuHan.test;
+            emuHan.StartEmulator(_selectedGame);
+        }
+
+        private void btnSearchGame_Click(object sender, EventArgs e)
+        {
+            this.lboGameList.Items.Clear();
+            string name = this.txtSearchGame.Text;
+            toggledSearchButtons = [true, true, true, true];
+            foreach (Game game in _gameList)
+            {
+                if (game.Name.ToLower().Contains(name))
+                {
+                    this.lboGameList.Items.Add(game.Name);
+                }
+            }
+        }
+
+        private void btnRefresh_Click(object sender, EventArgs e)
+        {
+            this.lboGameList.Items.Clear();
+            this.LoadAllGamesOnList();
         }
     }
 }

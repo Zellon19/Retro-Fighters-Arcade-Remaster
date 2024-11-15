@@ -19,7 +19,10 @@ namespace Retro_Fighters_Arcade.Handler
 
         public string test = new GameData().PsOneCorePath;
 
-        public void StartEmulator(Game pGame) => this.StartEmulator("a", "a");
+        public void StartEmulator(Game pGame)
+        {
+            
+        }
         
         private void StartEmulator(string corePath, string gamePath)
         {

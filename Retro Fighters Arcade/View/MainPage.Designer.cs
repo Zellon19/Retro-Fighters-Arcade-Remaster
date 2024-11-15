@@ -42,6 +42,7 @@
             btnNesSearchDisabled = new Button();
             btnAtariSearchDisabled = new Button();
             pboStartGame = new PictureBox();
+            btnRefresh = new Button();
             panel1 = new Panel();
             lblGameSearch = new Label();
             lblSelectEmulator = new Label();
@@ -103,6 +104,7 @@
             btnSearchGame.TabIndex = 0;
             tlpGeneral.SetToolTip(btnSearchGame, "Dale click aqui para buscar el juego.");
             btnSearchGame.UseVisualStyleBackColor = true;
+            btnSearchGame.Click += btnSearchGame_Click;
             // 
             // txtSearchGame
             // 
@@ -221,9 +223,21 @@
             tlpGeneral.SetToolTip(pboStartGame, "Click aqui para iniciar el juego seleccionado.");
             pboStartGame.Click += pboStartGame_Click;
             // 
+            // btnRefresh
+            // 
+            btnRefresh.Image = (Image)resources.GetObject("btnRefresh.Image");
+            btnRefresh.Location = new Point(826, 33);
+            btnRefresh.Name = "btnRefresh";
+            btnRefresh.Size = new Size(44, 44);
+            btnRefresh.TabIndex = 12;
+            tlpGeneral.SetToolTip(btnRefresh, "Dale click aqui para buscar el juego.");
+            btnRefresh.UseVisualStyleBackColor = true;
+            btnRefresh.Click += btnRefresh_Click;
+            // 
             // panel1
             // 
             panel1.BackColor = Color.Transparent;
+            panel1.Controls.Add(btnRefresh);
             panel1.Controls.Add(txtSearchGame);
             panel1.Controls.Add(lblGameSearch);
             panel1.Controls.Add(lblSelectEmulator);
@@ -249,9 +263,9 @@
             lblGameSearch.ForeColor = Color.Red;
             lblGameSearch.Location = new Point(473, 5);
             lblGameSearch.Name = "lblGameSearch";
-            lblGameSearch.Size = new Size(305, 21);
+            lblGameSearch.Size = new Size(145, 21);
             lblGameSearch.TabIndex = 0;
-            lblGameSearch.Text = "Buscar Juego (No disponible)";
+            lblGameSearch.Text = "Buscar Juego";
             // 
             // lblSelectEmulator
             // 
@@ -261,9 +275,9 @@
             lblSelectEmulator.ForeColor = Color.Red;
             lblSelectEmulator.Location = new Point(24, 5);
             lblSelectEmulator.Name = "lblSelectEmulator";
-            lblSelectEmulator.Size = new Size(401, 21);
+            lblSelectEmulator.Size = new Size(241, 21);
             lblSelectEmulator.TabIndex = 2;
-            lblSelectEmulator.Text = "Seleccionar Emulador (No disponible)";
+            lblSelectEmulator.Text = "Seleccionar Emulador";
             // 
             // panel2
             // 
@@ -622,5 +636,6 @@
         private PictureBox pboSegaGenMortalKombat5;
         private PictureBox pboSegaGenDoom32;
         private PictureBox pboSegaGenSuperStreetFighter2;
+        private Button btnRefresh;
     }
 }
